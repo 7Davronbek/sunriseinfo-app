@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="container">
             <div className="row">
                 <div className="col-lg-2">
-                    SUNRISE
+                    <h1>SUNRISE</h1>
                 </div>
             </div>
         </div>
