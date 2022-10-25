@@ -1,0 +1,156 @@
+.in_kat{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 199px 80px 100px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.top_in_kat{
+    display: flex;
+    justify-content: flex-start;
+    gap: 55px;
+}
+
+.botm_kupi{
+    display: none;
+}
+
+.left_top1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.left_img_top1{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.inkatalog_image img{
+   width: 100%;
+   border-radius: 5px;
+}
+
+.inkatalog_image{
+    width: 89px;
+    background-color: #f2f2f2;
+}
+
+.inkatalog_big_img{
+    width: 385px;
+    background-color: #f2f2f2;
+    padding: 15px;
+}
+
+.inkatalog_big_img img{
+    width: 100%;
+}
+
+.right_top1{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.right_top1 h4{
+    font-size: 21px;
+    line-height: 25.41px;
+}
+
+.right_top1 p{
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 400;
+}
+
+.right_top1 .sena_katalog{
+    color: #ff7e00;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.right_top1 p a{
+    color: #121212;
+}
+
+.send_katalog{
+    width: 168px;
+    border: none;
+    background-color: #ff7e00;
+    padding: 12px 56px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+@media(max-width:1142px){
+    .right_top1{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media(max-width:1071px){
+    .right_top1{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+@media(max-width:1015px){
+    .in_kat{
+        max-width: 1440px;
+        width: 100%;
+        margin: auto;
+        padding: 199px 40px 100px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+@media(max-width:935px){
+
+    .in_kat{
+        padding: 139px 40px 100px 40px;
+    }
+    .top_in_kat{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 55px;
+    }
+
+    .left_top1{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .send_katalog{
+        display: none;
+    }
+
+    .botm_kupi{
+        display: block;
+    } 
+}
+
+@media(max-width:555px){
+    .top_in_kat{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .left_top1{
+
+    }
+}

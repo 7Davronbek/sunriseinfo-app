@@ -1,0 +1,151 @@
+/* .kata_rogo{
+    width: ;
+} */
+
+.orgotexnika_katalog{
+    max-width: 1440px;
+    padding: 100px 80px 100px 80px;
+    margin: auto;
+}
+
+.card_katalog{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 30px;
+    gap: 29px;
+}
+
+.card_katalog img{
+    width: 90% !important;
+}
+
+.card_image{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    
+    padding: 15px 11px 67px 11px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.05px;
+}   
+
+.img_carousel_1{
+    border-radius: 5px !important;
+}
+
+.card_image .pereyti{
+    text-decoration: underline !important;
+    color: #121212;
+    transition: 0.3s ease-in;
+}
+.card_image .pereyti:hover{
+    
+    color: #8a8a8a;
+}
+
+.card_image img{
+    padding: 32px 23px 13px 23px;
+}
+
+.card_image a{
+    color: #121212;
+}
+
+
+
+.img_carousel_1{
+    border: 1px solid #f2f2f2;
+    padding: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image_carousel{
+    border-radius: 5px;
+    width: 100%;
+    height: 288px;
+    background-color: #f2f2f2;
+    padding: 18px 15px 16px 15px;
+}
+
+.xalegi{
+    width: 100%;
+    /* background-color: red; */
+    padding: 0px 20px 0px 20px;
+}
+
+.image_carousel img{
+    background: transparent;
+}
+
+.img_carousel_1 p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    margin: 1vh 0 1.5vh 0vw;
+    text-align: left;
+}
+
+.img_carousel_1 .sena_send{
+    /* margin: 0 0 0 1vw; */
+    padding: 12px 23px 12px 23px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #FF7E00;
+    border: none;
+    border-radius: 5px;
+}
+
+.img_carousel_1 .padd_img{
+    padding: 49px 0 67px 0 !important;
+}
+
+
+.image_carousel img:nth-child(3){
+    padding: 49px 0 67px 0 !important;
+}
+
+.bnt-serdechka{
+    /* margin-left: 1vw; */
+    background: transparent;
+    padding: 16px;
+    border: 1px solid #FF7E00;
+    border-radius: 5px;
+}
+
+.btn_sotsh{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2.7vw;
+}
+
+.popular_text{
+    margin-top: 100px;
+}
+
+.swiper-pagination-bullet{
+   display: none !important;
+}
+
+.swiper-button-next{
+    color: #ff7e00 !important;
+}
+
+.swiper-button-prev{
+ 
+    color: #ff7e00 !important;
+}
+
+.swiper {
+    padding-top: 50px !important;
+    margin-left: 0vw !important;
+}
+
+
+

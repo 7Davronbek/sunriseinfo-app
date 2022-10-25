@@ -1,0 +1,165 @@
+.home_flex_second{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 80px 0px 80px;
+    gap: 30px;
+}
+
+.home_second{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+
+.home_second_right{
+    padding-bottom: 80px;
+    width: 650px;
+}
+
+.home_second_right img{
+    width: 96%;
+}
+
+.home_second_right{
+    width: 60%;
+}
+
+.home_second_left{
+    padding: 80px 0px 220px 0px;
+    width: 40%;
+}
+
+.home_second_left a{
+    color: #ff7e00;
+}
+
+.home_second_left p{
+    font-size: 18px;
+    font-weight:  400;
+    color: #121212;
+    padding-top: 20px;
+}
+
+.see_mokre_text{
+    font-size: 22px;
+    color: #ff7e00 !important;
+}
+
+.abput_h1{
+    font-size: 44px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 53px;
+}
+
+@media(max-width: 992px){
+    .home_flex_second{
+        flex-direction: column;
+    }
+
+    .home_second_left{
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .home_second_right{
+        width: 100%;
+    }
+
+    .home_flex_second img{
+        width: 100%;
+    }
+
+    .see_mokre_text{
+        padding-top: -50px;
+    }
+
+}
+
+
+@media(max-width: 570px){
+    .home_flex_second{ 
+        padding: 0px 80px 0px 80px;   
+    }
+
+    .abput_h1{
+        font-size: 32px;
+    }
+}
+
+
+
+@media(max-width:464px){
+    .home_flex_second{
+        padding: 60px 40px 0px 40px;
+        gap: 10px;
+    }
+    
+    .home_second_left p{
+        padding-top: 0px;
+        text-align: left;
+    }
+
+    .see_mokre_text{
+        text-align: left;
+    }
+
+    .home_second_right{
+        margin-top: -40px;
+    }
+}
+
+@media(max-width:415px){
+    .home_second_left p{
+        text-align: left;
+        font-size: 13.5px;
+    }
+
+    .abput_h1{
+        text-align: left;
+        font-size: 28px;
+    }
+
+    .home_flex_second{
+        padding: 20px 20px 0px 20px;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 500px) {
+    .home_flex_second{
+        padding: 20px 40px 0px 40px;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 575px) {
+    .home_flex_second{
+        padding: 20px 50px 0px 50px;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 360px){
+    .home_second_left p{
+        text-align: left;
+        font-size: 13px;
+    }
+    .home_flex_second{
+        padding: 20px 15px 0px 15px;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 430px){
+    .home_second_left p{
+        text-align: left;
+        font-size: 15px;
+    }
+    .home_flex_second{
+        padding: 20px 20px 0px 20px;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,258 @@
+.footer_head{
+    background-color: #121212;
+
+}
+
+.footer{
+    max-width: 1440px;
+    margin: auto;
+}
+
+.foot_second{
+    display: none;
+}
+
+.fot_bootom{
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 50px 80px 132px 80px;
+    gap: 150px;
+}
+
+.footer_1 ul{
+    list-style-type: none;
+    color: #8a8a8a;
+    line-height: 21.78px;
+}
+
+.footer_1 h1{
+    font-size: 24px !important;
+    font-weight: 600;
+    list-style: 29px;
+    color: #ffffff;
+}
+
+.footer_1 ul li{
+    font-size: 18px!important;
+    padding-top: 24px;
+    transition: 0.4s;
+    margin-left: -2vw;
+    cursor: pointer;
+}
+
+.footer_1{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_1 ul li a{
+    color: #8a8a8a;
+    transition: 0.4s;
+}
+
+.footer_1 ul:nth-child(1) li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_1 ul:nth-child(1) li span{
+    color: #ffffff !important;
+}
+
+.politika{
+    padding-top: 63px!important;
+    font-size: 18px;
+}
+
+.footer_1 ul li:hover{
+    color: #ffffff;
+}
+
+.footer_1 ul:nth-child(1) li a:hover{
+    color: #ffffff;
+}
+
+
+@media(max-width:1236px){
+    .fot_bootom{
+        gap: 50px;
+    }
+}
+@media(max-width:1084px){
+    .fot_bootom{
+        gap: 50px;
+    }
+}
+@media(max-width:997px){
+    .fot_bootom{
+        gap: 20px;
+    }
+}
+@media(max-width:882px){
+    .fot_bootom{
+        gap: 10px;
+    }
+}
+
+@media(max-width:853px){
+   
+}
+
+@media(max-width:852px){
+  .fot_bootom{
+      display: none;
+  }
+
+  .foot_second{
+      display: block;
+  }
+
+  h1{
+      font-size: 24px;
+  }
+
+  .foot_second{
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 80px 132px 80px;
+    gap: 50px;
+  }
+
+  .ul_foor{
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 100px;
+      margin-left: -15px;
+  }
+
+  .navigakdf{
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 200px;
+  }
+
+  .sec_for ul{
+      margin-left: -15px;
+  }
+}
+
+@media(max-width:680px){
+    .navigakdf{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 100px;
+    }
+}
+
+@media(max-width:620px){
+    .navigakdf{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 50px;
+    }
+
+    .ther_sec ul{
+        margin-left: -15px;
+    }
+}
+
+@media(max-width: 597px){
+    .foot_second{
+        padding: 50px 20px 20px 50px;
+    }
+    .ul_foor{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+    .navigakdf{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 100px;
+    }
+}
+
+@media(max-width: 478px){
+    .foot_second{
+        padding: 50px 20px 20px 50px;
+    }
+
+    .ul_foor{
+        margin-left: -20px;
+    }
+}
+@media(max-width: 456px){
+  .ther_sec h1{
+margin-left: 5px;
+  }
+}
+
+
+
+@media(max-width: 433px){
+   .navigakdf{
+       flex-direction: column;
+   }
+
+   .ul_foor{
+       display: flex;
+       justify-content: center;
+       align-items: stretch;
+       margin-left: -15px;
+   }
+
+   .foot_second{
+       gap: 30px;
+   }
+
+   .navigakdf{
+       gap: 30px;
+   }
+
+   .ther_sec ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+   }
+}
+
+@media(max-width:388px){
+    .ul_foor{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .foot_second{
+        padding: 50px 8px 20px 30px;
+    }
+}
+
+
+@media (max-width:318px){
+    .foot_second{
+        padding: 50px 20px 20px 30px;
+    }
+    .politika{
+        font-size: 10px;
+    }
+}
+@media (max-width:280px){
+    .ther_sec ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+}

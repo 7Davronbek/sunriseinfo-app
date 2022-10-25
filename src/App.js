@@ -1,18 +1,41 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Main from "./pages/Main";
+import { useEffect } from 'react';
+import { Route, Router, Routes, useLocation } from 'react-router-dom';
+import './App.css';
+import AboutUs from './components/AboutUs/AboutUs';
+import Contacts from './components/Contacts/Contacts';
+import Footer from './components/Footer/Footer';
+import HomePage from './components/HomePage/HomePage';
+import InKatalog from './components/Katalog/InKatalog/InKatalog';
+import Katalog from './components/Katalog/Katalog';
+import Navbar from './components/Navbar/Navbar';
+import Orgotexnika from './components/Orgotextnika/Orgotexnika';
+import OurWork from './components/OurWork/OurWork';
+import Solnechnaya from './components/Solnechnaya/Solnechnaya';
 
-const App = () => {
+
+
+function App() {
+const {pathname} = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [pathname]);
   return (
     <>
-      <HashRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Main />} />
-        </Routes>
-      </HashRouter>
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/orgotexnika' element={<Orgotexnika />} />
+      <Route path='/solnechnaya' element={<Solnechnaya />} />
+      <Route path='/aboutUs' element={<AboutUs />} />
+      <Route path='/contact' element={<Contacts />} />
+      <Route path='/ourwork' element={<OurWork />} />
+      <Route path='/katalog' element={<Katalog />} />
+      <Route path='/inkatalog' element={<InKatalog />} />
+    </Routes>
+    <Footer />
     </>
   );
-};
+}
 
 export default App;

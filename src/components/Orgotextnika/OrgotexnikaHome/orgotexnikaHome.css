@@ -1,0 +1,52 @@
+.orgotexnika_clas{
+    width: 100%;
+    margin: auto;
+    background-image: url('../../../image/Rectangle 65.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.orgotexnika_home{
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.orgotexnika_home h1{
+    font-size: 56px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 67.7px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.orgotexnika_home p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media(max-width:1134){
+    .orgotexnika_home{
+        padding: 304px 300px 305px 400px;
+        text-align: center;
+    }
+}
+
+@media(max-width:440px){
+    .orgotexnika_home h1{
+        font-size: 28px;
+    }
+    .orgotexnika_home p{
+        font-size: 13px;
+    }
+}

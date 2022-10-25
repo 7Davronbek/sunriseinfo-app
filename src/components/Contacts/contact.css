@@ -1,0 +1,139 @@
+.contact{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 209px 80px 80px 52px;
+}
+
+.top_contact_1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 100px;
+ 
+}
+
+.a_teg_con{
+    color: #8a8a8a;
+    transition: 0.4s;
+}
+
+.a_teg_con:hover{
+    color: #121212;
+}
+
+
+.contact h2{
+    font-size: 44px;
+    color: #121212;
+    line-height: 53px;
+}
+
+.text1_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 31px;
+    transition: 0.4s;
+}
+
+.text1_contact h2{
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    color: #121212;
+}
+
+.text1_contact p{
+    color: #8a8a8a;
+}
+
+.top_contact_2{
+    width: 100%;
+    height: 520px;
+}
+
+.contact-map{
+    width: 100%;
+    height: 100%;
+}
+
+.social_medi{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-right: -1vw;
+}
+
+.social_medi span{
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 1px solid #8a8a8a;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.social_medi span:hover{
+    color: #121212!important;
+}
+
+.social_medi span .icon_fa{
+    width: 1.5em!important;
+    height: 1.5em;
+    color: #8a8a8a;
+}
+
+
+@media(max-width: 1074px){
+    .contact{
+        padding: 209px 80px 80px 52px;
+    }
+    .top_contact_1{
+        flex-direction: column;
+        gap: 0px;
+        text-align: left;
+    }
+
+    .social_medi span .icon_fa{
+        width: 1.3em!important;
+        height: 1.3em;
+        color: #8a8a8a;
+    }
+
+    .text1_contact{
+        gap: 0px;
+        /* padding-bottom: 20px; */
+        padding-top: 0px;
+    }
+    .social_medi{
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 660px){
+    .contact{
+        padding: 189px 30px 80px 30px;
+        gap: 10px;
+    }    
+}
+@media(max-width: 423px){
+    .contact{
+        padding: 189px 15px 80px 15px;
+        gap: 10px;
+    }    
+    .social_medi span .icon_fa{
+        width: 1.1em!important;
+        height: 1.1em;
+        color: #8a8a8a;
+    }
+
+.social_medi span{
+    padding: 10px 12px;
+}
+}
+
+

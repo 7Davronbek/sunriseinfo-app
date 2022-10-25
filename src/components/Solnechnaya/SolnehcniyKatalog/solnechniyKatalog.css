@@ -1,0 +1,124 @@
+.solnechniy_katLOG{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 100px 100px 80px !important;
+}
+
+.card_katalog{
+}
+
+.img_5_akk{
+    margin: 59px 69px 59px 19px;
+}
+
+.img_4_akk{
+    margin: 59px 69px 59px 10px;
+}
+
+.padd_sol{
+    padding-top: 55px;
+}
+
+.curseu{
+    padding: 30px 0px 0px 35px;
+}
+
+.btn_sol{
+    margin-left: -4vw !important;
+}
+
+@media(max-width: 992px){
+    .card_katalog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 80px 100px 80px;
+    }
+
+    .solnechniy_katLOG h2{
+        text-align: center;
+    }
+
+    .card_image{
+        width: 700px;
+    }
+
+    #card-katalog{
+        padding: 100px 80px 100px 100px;
+    }
+}
+
+@media(max-width: 735px){
+    .card_katalog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 80px 100px 80px;
+    }
+
+    .solnechniy_katLOG h2{
+        text-align: center;
+    }
+
+    .card_image{
+        width: 600px;
+    }
+}
+@media(max-width: 649px){
+    .card_katalog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 80px 100px 80px;
+    }
+
+    .solnechniy_katLOG h2{
+        text-align: center;
+    }
+
+    .card_image{
+        width: 500px;
+    }
+}
+
+
+@media(max-width:538px){
+    .card_image{
+        width: 450px;
+    }
+}
+@media(max-width:480px){
+    .card_image{
+        width: 400px;
+    }
+}
+@media(max-width:431px){
+    .card_image{
+        padding: 5px 11px 67px 11px;
+        width: 350px;
+        height: 400px;
+    }
+}
+@media(max-width:365px){
+    .card_image{
+        padding: 20px 11px 67px 15px;
+        width: 300px;
+        height: 400px;
+    }
+    .card_image img{ 
+        margin-top: 3vh;
+    }
+
+    .card_katalog{
+        padding: 10px 10px 10px 10px;
+    }
+
+  
+}
+
+@media(max-width:354px){
+    #card-katalog{
+        padding: 100px 10px 100px 25px;
+    }
+}

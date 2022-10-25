@@ -1,0 +1,365 @@
+.solnechniy_home{
+    width: 100%;
+    margin: auto;
+    background-image: url("../../../image/Rectangle 68.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 271px 659px 195px 80px;
+}
+
+.solnechniy_home h2{
+    font-size: 56px;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
+    text-align: left;
+    line-height: 67.7px;
+}
+
+.solnechniy_home p{
+    font-size: 18px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.solnechniy_home a{
+    color: #ffffff;
+    text-align: left;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.doveriya{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    padding: 100px 80px ;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.doveriya_1{
+    /* padding: 10px 59px 136px 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    min-height: 350px;
+    padding: 20px;
+}
+
+.doveriya_1 p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+}
+
+.doveriya_1:nth-child(1){
+    background-image: url("../../../image/Rectangle 85.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_dov{
+    background-image: url("../../../image/Rectangle 86.png") !important;
+}
+
+.img_dov2{
+    background-image: url("../../../image/Rectangle 87.png") !important;
+}
+
+.img_dov3{
+    background-image: url("../../../image/Rectangle 88.png") !important;
+}
+
+.doveriya_1 h4{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.doveriyaRow{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.doveriyaCol{
+    width: 24%;
+}
+
+
+
+
+
+.soln_uslug{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 80px;
+}
+
+.flex_soln_usl{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+
+.soln_imf_1 img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.soln_1_uslu{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+}
+
+.soln_imf_1 img{
+    width: 100%;
+}
+
+.sol_text{
+    padding: 5px 87px 20px 15px;
+}
+
+.sol_text p{
+    color: #8a8a8a;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25.2px;
+}
+
+.sol_text a{
+    color: #ff7e00;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.green_icon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.green_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.green_1 p{
+    padding-top: 25px;
+}
+
+
+@media(max-width: 992px){
+    .doveriyaRow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+    }
+
+    .doveriyaCol{
+        width: 70%;
+    }
+
+    .flex_soln_usl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .soln_1_uslu{
+        width: 70%;
+    }
+
+    .soln_uslug h2{
+        text-align: center;
+    }
+
+    .green_icon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 1242px){
+    .sol_text{
+        padding: 5px 40px 20px 15px;
+    }
+}
+@media(max-width: 1114px){
+    .sol_text{
+        padding: 5px 0px 20px 15px;
+    }
+}
+
+
+@media(max-width: 792px){
+    .doveriya{
+        padding: 80px 5px 10px 5px;
+    }
+
+    .flex_soln_usl{
+        padding: 20px 0px 10px 0px;
+    }
+
+    .soln_1_uslu{
+        width: 85%;
+    }
+
+    .solnechniy_home{
+        padding: 101px 40px 100px 40px;
+    }
+}
+
+@media(max-width: 792px){
+    .doveriyaRow{
+        padding: 0 0px;
+    }
+    .doveriya{
+        padding: 80px 5px 10px 5px;
+    }
+
+    .flex_soln_usl{
+        padding: 20px 0px 10px 0px;
+    }
+
+    .soln_1_uslu{
+        width: 92%;
+    }
+
+    .solnechniy_home{
+        padding: 101px 20px 100px 20px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .doveriya{
+        
+        padding: 80px 5px 5px 5px;
+    }
+
+    .flex_soln_usl{
+        padding: 10px 0px 10px 0px;
+    }
+
+    .soln_1_uslu{
+        width: 100%;
+
+    }
+    .doveriyaRow{
+        padding: 0 0px;
+    }
+
+    .soln_uslug{
+    padding:40px 30px ;
+    }
+    .solnechniy_home {
+        padding-left: 40px;
+    }
+
+    .doveriya{
+        padding: 40px 0px;
+    }
+}
+
+@media(max-width: 360px){
+    .doveriya{
+        padding: 5px 0px;
+    }
+
+    .doveriyaRow{
+        padding: 0 0px;
+    }
+    .soln_uslug{
+        padding:40px 20px ;
+        }
+        .solnechniy_home{
+            padding: 271px 5px 195px 40px;
+        }
+        .solnechniy_home h2{
+            font-size: 28px;
+            line-height: 40px;
+        }
+        .solnechniy_home p{
+            font-size: 13px;
+            line-height: 45px;
+            line-height: 20px;
+        }
+        .solnechniy_home a{
+            font-size: 13px;
+            line-height: 45px;
+            line-height: 25px;
+        } 
+}
+
+
+@media(max-width:1280px){
+    .solnechniy_home{
+        padding: 271px 390px 195px 80px;
+    }
+}
+@media(max-width:1012px){
+    .solnechniy_home{
+        padding: 271px 290px 195px 80px;
+    }
+}
+@media(max-width:921px){
+    .solnechniy_home{
+        padding: 271px 190px 195px 80px;
+    }
+}
+@media(max-width:838px){
+    .solnechniy_home{
+        padding: 271px 90px 195px 80px;
+    }
+}
+@media(max-width:710px){
+    .solnechniy_home{
+        padding: 271px 5px 195px 80px;
+    }
+}
+@media(max-width:535px){
+    .solnechniy_home h2{
+        font-size: 44px;
+        line-height: 45px;
+    }
+}
+@media(max-width:500px){
+    .solnechniy_home{
+        padding: 271px 5px 195px 40px;
+    }
+    .solnechniy_home h2{
+        font-size: 36px;
+        line-height: 45px;
+    }
+    .solnechniy_home p{
+        font-size: 16px;
+        line-height: 45px;
+        line-height: 25px;
+    }
+    .solnechniy_home a{
+        font-size: 16px;
+        line-height: 45px;
+        line-height: 25px;
+    }   
+}

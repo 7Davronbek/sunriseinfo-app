@@ -1,0 +1,361 @@
+.katalaog_glavni{
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 189px 80px 100px 80px;
+}
+
+.katalog_left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 38px;
+    gap: 15px;
+}
+
+.katalog_right{
+    width: 80%;
+}
+
+.katalog_left .input_filtr{
+    width: 100%;
+    background-color: yellow;
+    border-bottom: 1px solid #ff7e00;
+    padding: 30px 0px 25px 0px;
+}
+
+.input_filtr input{
+    width: 85%;
+    border: 1px solid #8a8a8a;
+    outline: none;
+    padding: 8px;
+}
+
+.katalog_left .ul_katalog {
+    list-style-type: none;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    left: -2vw;
+}
+
+.katalaog_left .ul_katalog li{
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.4s;
+    cursor: pointer; 
+    border-bottom: 1px solid black;
+}
+
+.katalaog_left .ul_katalog li:hover{
+    color: #8a8a8a;
+}
+
+
+/* select */
+
+.select {
+    position: relative;
+    left: 21vw;
+    overflow: hidden;
+    display: block;
+    border: 1px solid #8a8a8a;
+    margin: auto;
+    width: 270px;
+    height: 100%;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .select > i.toggle {
+    position: absolute;
+    z-index: 4;
+    right: 1.5em;
+    top: 1.6em;
+    color: #ccc;
+  }
+  .select .title,
+  .select .placeholder {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1.2em 2em;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+  .select > input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .select > input:checked ~ i.toggle.icon-arrow-down {
+    display: none;
+  }
+  .select > input:checked ~ i.toggle.icon-arrow-up {
+    display: block;
+  }
+  .select > input:checked div.options label.option .title {
+    display: none !important;
+  }
+  .select > input:not(:checked) {
+    z-index: 4;
+  }
+  .select > input:not(:checked) ~ label.option > span.title {
+    display: none;
+  }
+  .select > input:not(:checked) ~ i.toggle.icon-arrow-up {
+    display: none;
+  }
+  .select > input:not(:checked) ~ i.toggle.icon-arrow-down {
+    display: block;
+  }
+  .select > input:disabled {
+    cursor: no-drop;
+  }
+  .select > span.placeholder {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width: 100%;
+    color: #121212;
+    border-top: 0px;
+  }
+  .select label.option {
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    transition: all 1s ease-out;
+  }
+  .select label.option span.title {
+    position: relative;
+    z-index: 2;
+    transition: background 0.3s ease-out;
+  }
+  .select label.option span.title i.icon {
+    padding-right: 8px;
+    color: #92a8d1;
+  }
+  .select label.option span.title:hover {
+    color: #ff7300;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+  .select label.option input {
+    display: none;
+  }
+  .select label.option input:checked ~ span.title {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    top: 0px;
+    font-size: 12px;
+    background: #fff;
+    border-top: 0px;
+    box-shadow: none;
+    color: inherit;
+    width: 100%;
+  }
+  .select label.option input:disabled ~ span.title {
+    background: #f9f9f9 !important;
+    color: #aaa;
+  }
+  .select label.option input:disabled ~ span.title:hover {
+    color: #aaa;
+    background: none;
+    cursor: no-drop;
+  }
+
+
+  /* input posik */
+
+
+.input_katalog {
+    border-style: none;
+    background: transparent;
+    outline: none;
+  }
+  
+.btn_katalog {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  .webflow-style-input {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 2px;
+    padding-left: 5px;
+    /* margin-left: -0.9vw; */
+    background: #fff;
+    border: 1px solid #8a8a8a7a;
+  }
+  .webflow-style-input:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #ff7e00, #FEFFB8, #ffbe27, #ff7e00, #fdac5b);
+    background-size: 500% auto;
+    -webkit-animation: gradient 3s linear infinite;
+            animation: gradient 3s linear infinite;
+  }
+  
+  .webflow-style-input .input_katalog {
+    flex-grow: 1;
+    color: #121212;
+    font-size: 16px;
+    line-height: 2.4rem;
+    vertical-align: middle;
+  }
+  .webflow-style-input input::-webkit-input-placeholder {
+    color: #8a8a8a;
+  }
+  
+  .webflow-style-input .btn_katalog {
+    color: #8a8a8a;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    transition: color 0.25s;
+  }
+  .webflow-style-input .btn_katalog:hover {
+    color: #fd7e00;
+  }
+
+
+
+  /* accrdion */
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+
+/* section */
+.section {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*
+=============== 
+Questions
+===============
+*/
+
+.main_accrdion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+.container {
+  width: 95%;
+  margin-left: -0.7vw;
+  display: grid;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+.question {
+  /* padding: 0rem 1rem; */
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 1rem;
+}
+.question h4 {
+  font-size: 16px;
+  line-height: 20.8px;
+  text-transform: none;
+  line-height: 1;
+}
+.question p {
+  color: #8a8a8a;
+  margin-bottom: 0;
+  margin-top: 0.4rem;
+}
+.question header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question header h4 {
+  margin-bottom: 0;
+}
+.btn {
+  background: transparent;
+  border-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a8a8a;
+  cursor: pointer;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.question-title {
+  cursor: pointer;
+}
+
+.question ul li{
+  font-size: 16px;
+  color: #8a8a8a;
+  font-weight: 400;
+  
+}
