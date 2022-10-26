@@ -6,11 +6,12 @@ import HomeWork from './HomeOurWork/HomeWork'
 
 export default function HomePage() {
   return (
-   <>
-    <HomeAbout />
-    <HomeSecond/>
-    <HomeUslugi />
-    <HomeWork />
-   </>
+    <>
+      <HomeAbout />
+      <HomeSecond />
+      <HomeUslugi />
+      <HomeWork />
+  
+    </>
   )
 }

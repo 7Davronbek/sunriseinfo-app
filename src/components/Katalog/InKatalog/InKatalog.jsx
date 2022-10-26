@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './inKatalog.css';
 import Inkatalog from '../../../image/image 4.png'
 import TabsKatalog from './KatalogTabs/TabsKatalog';
 import Swiper2 from '../../Orgotextnika/OrgotexnikaKatalog/Swiper/Swiper';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
+import { API_PATH } from '../../../tools/constants';
 
 
 export default function InKatalog() {
+
+    const location = useLocation()
+    const path = location.pathname.split('/')[2]
+
+    const getById = async () => {
+        await axios.get(API_PATH + `/main/product-detail/${path}`)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    useEffect(() => {
+        getById()
+    }, [path])
+
     return (
         <>
             <div className="in_kat">

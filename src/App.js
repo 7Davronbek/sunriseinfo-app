@@ -31,7 +31,7 @@ const {pathname} = useLocation();
       <Route path='/contact' element={<Contacts />} />
       <Route path='/ourwork' element={<OurWork />} />
       <Route path='/katalog' element={<Katalog />} />
-      <Route path='/inkatalog' element={<InKatalog />} />
+      <Route path='/see-catalog/:id' element={<InKatalog />} />
     </Routes>
     <Footer />
     </>

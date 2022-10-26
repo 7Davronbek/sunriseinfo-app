@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './katalogObshiy.css'
 import Card_img from '../../../image/image 3.png'
 import serdechka from '../../../image/Union.svg'
@@ -9,11 +9,12 @@ import axios from 'axios'
 import { API_PATH } from '../../../tools/constants'
 
 export default function KatalogObshi() {
+    const [product, setProduct] = useState([])
 
     const getProducts = async () => {
         await axios.get(API_PATH + '/main/products')
             .then((res) => {
-                console.log(res);
+                setProduct(res.data.data)
             })
             .catch((err) => {
                 console.log(err);
@@ -27,128 +28,50 @@ export default function KatalogObshi() {
     return (
         <>
             <div className="frs_katalog">
-                <div className="top_frs_1">
-                    <div className="frs_1">
-                        <div className="imag_frs_1">
-                            <img src={Card_img} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <Link to='/inkatalog' style={{ textDecoration: "none" }}>
-                                    <button className="btn_sena">15 455 000 сум</button>
-                                </Link>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="frs_1">
-                        <div className="imag_frs_1 img_sec">
-                            <img src={Card_image_2} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <button className="btn_sena">15 455 000 сум</button>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="frs_1">
-                        <div className="imag_frs_1 image_keyborads">
-                            <img src={Card_image_3} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <button className="btn_sena">15 455 000 сум</button>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {/* {product && product.map((item, index) => (
+                        <div key={index} className="col-lg-4 mb-4">
 
+                            <div className="frs_1">
+                                <div className="imag_frs_1">
+                                    <img src={Card_img} alt="sunrise uz" />
+                                </div>
+                                <div className="text_frs">
+                                    <h2>{item.description}</h2>
+                                    <div className="btn_katalog">
+                                        <Link to={`/inkatalog/${item.id}`} style={{ textDecoration: "none" }}>
+                                            <button className="btn_sena">{item.price} сум</button>
+                                        </Link>
+                                        <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    ))} */}
 
                 <div className="top_frs_1">
-                    <div className="frs_1">
-                        <div className="imag_frs_1">
-                            <img src={Card_img} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <Link to='/inkatalog' style={{ textDecoration: "none" }}>
-                                    <button className="btn_sena">15 455 000 сум</button>
-                                </Link>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
+
+                    {product && product.map((item, index) => (
+
+                        <div key={index} className="frs_1">
+                            <div className="imag_frs_1">
+                                <img src={Card_img} alt="" />
+                            </div>
+                            <div className="text_frs">
+                                <h2>{item.description}</h2>
+                                <div className="btn_katalog">
+                                    <Link to={`/see-catalog/${item.id}`} style={{ textDecoration: "none" }}>
+                                        <button className="btn_sena">{item.price} сум</button>
+                                    </Link>
+                                    <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="frs_1">
-                        <div className="imag_frs_1 img_sec">
-                            <img src={Card_image_2} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <button className="btn_sena">15 455 000 сум</button>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="frs_1">
-                        <div className="imag_frs_1 image_keyborads">
-                            <img src={Card_image_3} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <button className="btn_sena">15 455 000 сум</button>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
+
+                    ))}
+
                 </div>
-                <div className="top_frs_1">
-                    <div className="frs_1">
-                        <div className="imag_frs_1">
-                            <img src={Card_img} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <Link to='/inkatalog' style={{ textDecoration: "none" }}>
-                                    <button className="btn_sena">15 455 000 сум</button>
-                                </Link>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="frs_1">
-                        <div className="imag_frs_1 img_sec">
-                            <img src={Card_image_2} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <button className="btn_sena">15 455 000 сум</button>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="frs_1">
-                        <div className="imag_frs_1 image_keyborads">
-                            <img src={Card_image_3} alt="" />
-                        </div>
-                        <div className="text_frs">
-                            <h2>Cursus eget id elit consequat dolor.</h2>
-                            <div className="btn_katalog">
-                                <button className="btn_sena">15 455 000 сум</button>
-                                <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
         </>
