@@ -23,9 +23,9 @@ export default function KatalogGlavni() {
                     <main className='main_accrdion'>
                         <div className='container'>
                             <section className='info'>
-                                {questions.map((question) => (
+                                {/* {questions.map((question) => (
                                     <Question key={question.id} {...question} />
-                                ))}
+                                ))} */}
                             </section>
                         </div>
                     </main>

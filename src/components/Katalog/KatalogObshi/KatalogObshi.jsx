@@ -18,9 +18,9 @@ export default function KatalogObshi() {
                         <div className="text_frs">
                             <h2>Cursus eget id elit consequat dolor.</h2>
                             <div className="btn_katalog">
-                               <Link to='/inkatalog' style={{textDecoration: "none"}}> 
-                               <button className="btn_sena">15 455 000 сум</button>
-                               </Link>
+                                <Link to='/inkatalog' style={{ textDecoration: "none" }}>
+                                    <button className="btn_sena">15 455 000 сум</button>
+                                </Link>
                                 <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
                             </div>
                         </div>
@@ -60,9 +60,9 @@ export default function KatalogObshi() {
                         <div className="text_frs">
                             <h2>Cursus eget id elit consequat dolor.</h2>
                             <div className="btn_katalog">
-                               <Link to='/inkatalog' style={{textDecoration: "none"}}> 
-                               <button className="btn_sena">15 455 000 сум</button>
-                               </Link>
+                                <Link to='/inkatalog' style={{ textDecoration: "none" }}>
+                                    <button className="btn_sena">15 455 000 сум</button>
+                                </Link>
                                 <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
                             </div>
                         </div>
@@ -100,9 +100,9 @@ export default function KatalogObshi() {
                         <div className="text_frs">
                             <h2>Cursus eget id elit consequat dolor.</h2>
                             <div className="btn_katalog">
-                               <Link to='/inkatalog' style={{textDecoration: "none"}}> 
-                               <button className="btn_sena">15 455 000 сум</button>
-                               </Link>
+                                <Link to='/inkatalog' style={{ textDecoration: "none" }}>
+                                    <button className="btn_sena">15 455 000 сум</button>
+                                </Link>
                                 <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
                             </div>
                         </div>

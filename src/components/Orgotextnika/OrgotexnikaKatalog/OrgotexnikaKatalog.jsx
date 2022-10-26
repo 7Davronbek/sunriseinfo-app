@@ -7,9 +7,9 @@ import img4 from '../../../image/image 12.png'
 import img5 from '../../../image/image 8.png'
 import img6 from '../../../image/image 7.png'
 import img7 from '../../../image/image 6.png'
-import img8 from '../../../image/Без имени-1 1.png'
-import img9 from '../../../image/image 10.png'
-import Responsive from './Carousel/Carousel'
+// import img8 from '../../../image/Без имени-1 1.png'
+// import img9 from '../../../image/image 10.png'
+// import Responsive from './Carousel/Carousel'
 import Swiper2 from './Swiper/Swiper'
 
 export default function OrgotexnikaKatalog() {
@@ -22,10 +22,10 @@ export default function OrgotexnikaKatalog() {
                         <h3>Компьютеры</h3>
                         <img src={img7} alt="" />
                     </div>
-                    <div data-aos="fade-up" className="card_image">
+                    {/* <div data-aos="fade-up" className="card_image">
                         <h3>Ноутбуки</h3>
                         <img src={img8} alt="" />
-                    </div>
+                    </div> */}
                     <div data-aos="fade-up" className="card_image">
                         <h3>Проекторы</h3>
                         <img src={img6} alt="" />

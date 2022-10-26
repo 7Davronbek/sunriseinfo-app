@@ -4,8 +4,9 @@ import KatalogGlavni from './KatalogGlavni/KatalogGlavni'
 export default function Katalog() {
   return (
     <>
-    <KatalogGlavni />
-    
+
+      <KatalogGlavni />
+
     </>
   )
 }
