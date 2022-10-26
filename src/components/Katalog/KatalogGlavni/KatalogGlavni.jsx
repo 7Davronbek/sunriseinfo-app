@@ -1,12 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './katalogGlavni.css';
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import Question from './SingleQuestion';
 import data from '../data';
 import KatalogObshi from '../KatalogObshi/KatalogObshi';
+import axios from 'axios';
+import { API_PATH } from '../../../tools/constants'
 
 export default function KatalogGlavni() {
-    const [questions, setQuestions] = useState(data)
+    const [category, setCategory] = useState([])
+
+    const getCategories = async () => {
+        await axios.get(API_PATH + '/main/category')
+            .then((res) => {
+                setCategory(res.data)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    useEffect(() => {
+        getCategories()
+    }, [])
+
     return (
         <>
             <div className="katalaog_glavni">
@@ -23,16 +40,16 @@ export default function KatalogGlavni() {
                     <main className='main_accrdion'>
                         <div className='container'>
                             <section className='info'>
-                                {/* {questions.map((question) => (
+                                {category && category.map((question) => (
                                     <Question key={question.id} {...question} />
-                                ))} */}
+                                ))}
                             </section>
                         </div>
                     </main>
                 </div>
 
                 <div className="katalog_right">
-                    <div className="poisk">
+                    {/* <div className="poisk">
                         <div class="select animated zoomIn">
                             <input type="radio" name="option" />
                             <span class="placeholder">Фильтр</span>
@@ -44,7 +61,8 @@ export default function KatalogGlavni() {
                                 <input type="radio" name="option" />
                                 <span class="title animated fadeIn"><i class="icon icon-fire"></i>По убыванию</span>
                             </label>
-                        </div></div>
+                        </div>
+                    </div> */}
                     <div className="top_cards_katalog">
                         <KatalogObshi />
                     </div>

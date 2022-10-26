@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './katalogObshiy.css'
 import Card_img from '../../../image/image 3.png'
 import serdechka from '../../../image/Union.svg'
 import Card_image_2 from '../../../image/image 4.png'
 import Card_image_3 from '../../../image/image 5.png'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { API_PATH } from '../../../tools/constants'
 
 export default function KatalogObshi() {
+
+    const getProducts = async () => {
+        await axios.get(API_PATH + '/main/products')
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    useEffect(() => {
+        getProducts()
+    }, [])
+
     return (
         <>
             <div className="frs_katalog">
