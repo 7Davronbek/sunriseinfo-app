@@ -11,6 +11,7 @@ import Navbar from './components/Navbar/Navbar';
 import Orgotexnika from './components/Orgotextnika/Orgotexnika';
 import OurWork from './components/OurWork/OurWork';
 import Solnechnaya from './components/Solnechnaya/Solnechnaya';
+import Catalog2 from './pages/Catalog2';
 
 
 
@@ -30,7 +31,10 @@ const {pathname} = useLocation();
       <Route path='/aboutUs' element={<AboutUs />} />
       <Route path='/contact' element={<Contacts />} />
       <Route path='/ourwork' element={<OurWork />} />
+
       <Route path='/katalog' element={<Katalog />} />
+      <Route path='/katalog-2' element={<Catalog2 />} />
+
       <Route path='/see-catalog/:id' element={<InKatalog />} />
     </Routes>
     <Footer />
