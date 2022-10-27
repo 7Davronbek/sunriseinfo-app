@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './inKatalog.css';
 import Inkatalog from '../../../image/image 4.png'
 import TabsKatalog from './KatalogTabs/TabsKatalog';
@@ -12,11 +12,12 @@ export default function InKatalog() {
 
     const location = useLocation()
     const path = location.pathname.split('/')[2]
+    const [product, setProduct] = useState({})
 
     const getById = async () => {
         await axios.get(API_PATH + `/main/product-detail/${path}`)
             .then((res) => {
-                console.log(res);
+                setProduct(res.data)
             })
             .catch((err) => {
                 console.log(err);
@@ -34,23 +35,23 @@ export default function InKatalog() {
                     <button className='send_katalog botm_kupi'>Купить</button>
                     <div className="left_top1">
                         <div className="left_img_top1">
-                            <div className="inkatalog_image"><img src={Inkatalog} alt="" /></div>
-                            <div className="inkatalog_image"><img src={Inkatalog} alt="" /></div>
-                            <div className="inkatalog_image"><img src={Inkatalog} alt="" /></div>
-                            <div className="inkatalog_image"><img src={Inkatalog} alt="" /></div>
+                            <div className="inkatalog_image"><img src={Inkatalog} alt="sunriseinfo produkt" /></div>
+                            <div className="inkatalog_image"><img src={Inkatalog} alt="sunriseinfo produkt" /></div>
+                            <div className="inkatalog_image"><img src={Inkatalog} alt="sunriseinfo produkt" /></div>
+                            <div className="inkatalog_image"><img src={Inkatalog} alt="sunriseinfo produkt" /></div>
                         </div>
                         <div className="inkatalog_big_img"><img src={Inkatalog} alt="" /></div>
                     </div>
                     <div className="right_top1">
-                        <h2>Ullamcorper at venenatis volutpat.</h2>
+                        <h2>{product?.name}</h2>
                         <p>1 отзыв <a href="#">| Добавить отзыв</a></p>
-                        <a className='sena_katalog' href="#">1 500 000 сум</a>
+                        <a className='sena_katalog' href="#">{product?.price} сум</a>
                         <h4>Описание </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum tellus magnis in rutrum diam suspendisse aliquam. Erat ullamcorper in nulla accumsan magna volutpat egestas. Montes, egestas cursus ornare vestibulum, augue sed mi, dui consectetur. Dui sem aliquet eu aliquam.</p>
-                        <button className='send_katalog'>Купить</button>
+                        <p>{product?.description}</p>
+                        <a href='tel: +998949988898' className='send_katalog'>Купить</a>
                     </div>
                 </div>
-                <TabsKatalog />
+                <TabsKatalog product={product} />
                 <Swiper2 />
             </div>
 
