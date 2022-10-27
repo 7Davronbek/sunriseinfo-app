@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from 'react-icons/fa'
 import { API_PATH } from "../../../../tools/constants";
 import './TabsKatalog.css'
@@ -7,15 +7,25 @@ import './TabsKatalog.css'
 function TabsKatalog({ product }) {
     const [toggleState, setToggleState] = useState(1);
     const [rating, setRating] = useState(null)
+    const [disable, setDisable] = useState(false)
 
     const toggleTab = (index) => {
         setToggleState(index);
     };
 
     const postStars = async (e) => {
-        await axios.post(API_PATH + '/main/rate/', { rating: e, product: product.id })
-        console.log(e);
+        await axios.post(API_PATH + '/main/rate/', { rate: e, product: product.id })
+            .then((res) => {
+                setDisable(true)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
     }
+
+    useEffect(() => {
+        setDisable(false)
+    }, [])
 
     return (
         <div className="tab_cotae">
@@ -81,6 +91,7 @@ function TabsKatalog({ product }) {
                                 <input
                                     type="radio"
                                     name="rating"
+                                    disabled={disable}
                                     value={ratingValue}
                                     onClick={() => setRating(ratingValue)}
                                     onChange={(e) => postStars(ratingValue)}
