@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { FaStar } from 'react-icons/fa'
 import './TabsKatalog.css'
 
-function TabsKatalog({product}) {
+function TabsKatalog({ product }) {
     const [toggleState, setToggleState] = useState(1);
+    const [rating, setRating] = useState(null)
 
     const toggleTab = (index) => {
         setToggleState(index);
@@ -64,9 +66,47 @@ function TabsKatalog({product}) {
                     >
                         <h2>{product?.name}</h2>
                         <hr />
-                        <p>
-                            {/* {product?.description} */}
-                        </p>
+
+                        {[...Array(5)].map((star, index) => {
+                            const ratingValue = index + 1;
+
+                            return (<label>
+                                <input
+                                    type="radio"
+                                    name="rating"
+                                    value={ratingValue}
+                                    onClick={() => setRating(ratingValue)}
+                                />
+                                <FaStar
+                                    className="star"
+                                    color={ratingValue <= rating ? 'yellow' : 'silver'}
+                                />
+                            </label>
+                            )
+                        })}
+
+                        {/* <label>
+                            <input
+                                type="radio"
+                                name="rating"
+                                value={ratingValue + 1}
+                            />
+                            <FaStar
+                                className="star"
+                                color={'red'}
+                            />
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value={ratingValue + 2} />
+                            <FaStar
+                                className="star"
+                                color={'red'}
+                            />
+                        </label> */}
+
+
+
+                        {/* {product?.description} */}
                     </div>
                 </div>
             </div>
