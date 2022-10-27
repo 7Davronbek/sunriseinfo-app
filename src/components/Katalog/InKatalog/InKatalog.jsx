@@ -102,7 +102,7 @@ export default function InKatalog() {
                     </div> */}
                     <div className="right_top1">
                         <h2>{product.name && product.name}</h2>
-                        <p>1 отзыв <a href="#">| Добавить отзыв</a></p>
+                        <p>{product.get_rate && product.get_rate} отзыв <a href="#"></a></p>
                         <h5 className='sena_katalog'>{product.price && product.price} сум</h5>
                         <h4>Описание </h4>
                         <p>{product.description && product.description.slice(0, 20)}</p>
