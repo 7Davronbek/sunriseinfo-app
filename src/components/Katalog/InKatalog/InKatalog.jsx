@@ -23,6 +23,17 @@ export default function InKatalog() {
     const path = location.pathname.split('/')[2]
     const [product, setProduct] = useState({})
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [allProducts, setAllProducts] = useState([])
+
+    const getAllProducts = async() => {
+        await axios.get(API_PATH + '/main/products/')
+            .then((res) => {
+                setAllProducts(res.data.data)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 
     const getById = async () => {
         await axios.get(API_PATH + `/main/product-detail/${path}`)
@@ -36,6 +47,7 @@ export default function InKatalog() {
 
     useEffect(() => {
         getById()
+        getAllProducts()
     }, [path])
 
     return (
@@ -58,7 +70,7 @@ export default function InKatalog() {
                     >
                         {product.product_images && product.product_images.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                <img alt='sunriseinfo produkt' src="https://swiperjs.com/demos/images/nature-1.jpg" />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -74,7 +86,7 @@ export default function InKatalog() {
                     >
                         {product.product_images && product.product_images.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                <img alt='sunriseinfo produkt' src="https://swiperjs.com/demos/images/nature-1.jpg" />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -98,7 +110,7 @@ export default function InKatalog() {
                     </div>
                 </div>
                 <TabsKatalog product={product} />
-                <Swiper2 />
+                <Swiper2 allProducts={allProducts} />
             </div>
 
         </>

@@ -10,8 +10,9 @@ import Card_3 from '../../../../image/image 5 (1).png'
 import Card_4 from '../../../../image/image 5.png'
 import '../orgotexnikaKatalog.css';
 import serdechka from '../../../../image/Union.svg';
+import { Link } from 'react-router-dom';
 
-export default function Swiper2() {
+export default function Swiper2({ allProducts }) {
   return (
     <>
       <Swiper
@@ -27,70 +28,24 @@ export default function Swiper2() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide> <div className="img_carousel_1">
-          <div className="image_carousel">
-            <img src={Card_1} alt="" />
-          </div>
-          <div className="xalegi">
-            <p>Cursus eget id elit consequat dolor.</p>
-            <div className="btn_sotsh">
-              <button data-aos="fade-right" className="sena_send btn_sol">1 500 000 сум</button>
+        {allProducts && allProducts.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="img_carousel_1">
+              <div className="image_carousel">
+                <img src={Card_1} alt="sunriseinfo" />
+              </div>
+              <div className="xalegi">
+                <p>{item.name}</p>
+                <div className="btn_sotsh">
+                  <Link to={`/see-catalog/${item.id}`} data-aos="fade-right" className="sena_send btn_sol">{item.price} сум</Link>
 
-              <button data-aos="fade-left" className="bnt-serdechka"><img src={serdechka} alt="" /></button>
-            </div>
-          </div>
-        </div></SwiperSlide>
-        <SwiperSlide>
-          <div className="img_carousel_1">
-            <div className="image_carousel">
-              <img src={Card_2} alt="" />
-            </div>
-            <div className="xalegi">
-              <p>Erat urna sed viverra mauris eu.</p>
-              <div className="btn_sotsh">
-                <button data-aos="fade-right" className="sena_send btn_sol">15 455 000 сум</button>
-
-                <button data-aos="fade-left" className="bnt-serdechka"><img src={serdechka} alt="" /></button>
+                  <button data-aos="fade-left" className="bnt-serdechka"><img src={serdechka} alt="sunriseinfo" /></button>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img_carousel_1">
-            <div className="image_carousel padd_img">
-              <img src={Card_3} alt="" />
-            </div>
-            <div className="xalegi">
-              <p>Quis massa pulvinar quam.</p>
-              <div className="btn_sotsh">
-                <button data-aos="fade-right" className="sena_send btn_sol">700 000 сум</button>
+          </SwiperSlide>
+        ))}
 
-                <button data-aos="fade-left" className="bnt-serdechka"><img src={serdechka} alt="" /></button>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img_carousel_1">
-            <div className="image_carousel padd_img">
-              <img src={Card_4} alt="" />
-
-            </div>
-            <div className="xalegi">
-              <p>Molestie aliquet purus amet amet.</p>
-              <div className="btn_sotsh">
-                <button data-aos="fade-right" className="sena_send btn_sol">700 000 сум</button>
-                <button data-aos="fade-left" className="bnt-serdechka"><img src={serdechka} alt="" /></button>
-
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
 
     </>
