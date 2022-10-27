@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-spinners": "^0.13.6",
+    "reactstrap": "^9.1.4",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.4.4",
     "web-vitals": "^2.1.4"

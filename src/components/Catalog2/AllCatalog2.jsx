@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './katalogObshiy.css'
-import Card_img from '../../../image/image 3.png'
-import serdechka from '../../../image/Union.svg'
+import '../Katalog/KatalogObshi/katalogObshiy.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { API_PATH } from '../../../tools/constants'
+// import { API_PATH } from '../../../tools/constants'
 
 export default function AllCatalog2() {
-
 
     return (
         <>

@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './katalogObshiy.css'
 import Card_img from '../../../image/image 3.png'
 import serdechka from '../../../image/Union.svg'
-import Card_image_2 from '../../../image/image 4.png'
-import Card_image_3 from '../../../image/image 5.png'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { API_PATH } from '../../../tools/constants'
@@ -28,26 +26,7 @@ export default function KatalogObshi() {
     return (
         <>
             <div className="frs_katalog">
-                {/* {product && product.map((item, index) => (
-                        <div key={index} className="col-lg-4 mb-4">
 
-                            <div className="frs_1">
-                                <div className="imag_frs_1">
-                                    <img src={Card_img} alt="sunrise uz" />
-                                </div>
-                                <div className="text_frs">
-                                    <h2>{item.description}</h2>
-                                    <div className="btn_katalog">
-                                        <Link to={`/inkatalog/${item.id}`} style={{ textDecoration: "none" }}>
-                                            <button className="btn_sena">{item.price} сум</button>
-                                        </Link>
-                                        <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    ))} */}
 
                 <div className="top_frs_1">
 

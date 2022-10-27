@@ -1,9 +1,42 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import KatalogObshi from '../components/Katalog/KatalogObshi/KatalogObshi'
+import AllCatalog2 from '../components/Catalog2/AllCatalog2'
+import { API_PATH } from '../tools/constants'
+import {
+    Accordion,
+    AccordionBody,
+    AccordionHeader,
+    AccordionItem,
+} from 'reactstrap';
 
 const Catalog2 = () => {
     const [expanded, setExpanded] = useState(false)
+    const [categories, setCategories] = useState([])
+
+    const getProductCategories = async () => {
+        await axios.get(API_PATH + '/products/category-2/')
+            .then((res) => {
+                setCategories(res.data)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    const [open, setOpen] = useState('1');
+    const toggle = (id) => {
+        if (open === id) {
+            setOpen();
+        } else {
+            setOpen(id);
+        }
+    };
+
+    useEffect(() => {
+        getProductCategories()
+    }, [])
+
     return (
         <>
 
@@ -21,14 +54,25 @@ const Catalog2 = () => {
                     <main className='main_accrdion'>
                         <div className='container'>
                             <section className='info'>
-                                {/* {category && category.map((question) => (
-                                    <Question key={question.id} {...question} />
-                                ))} */}
 
-                                <article className='question'>
+                                <Accordion className='service__list border2' open={open} toggle={toggle}>
+                                    <AccordionItem className='wrap'>
+                                        <AccordionHeader targetId="1">
+                                            Lorem
+                                        </AccordionHeader>
+                                        <AccordionBody accordionId="1">
+
+                                            <ul>
+                                                <li>Lorem3</li>
+                                            </ul>
+                                        </AccordionBody>
+                                    </AccordionItem>
+                                </Accordion>
+
+
+                                {/* <article className='question'>
                                     <header>
                                         <h4 onClick={() => setExpanded(!expanded)} style={{ userSelect: 'none' }} className='question-title py-3 w-100'>
-                                            {/* {name} */}lorem
                                         </h4>
                                         <button className='btn' onClick={() => setExpanded(!expanded)}>
                                             {expanded ? <AiOutlineMinus /> : <AiOutlinePlus />}
@@ -39,7 +83,8 @@ const Catalog2 = () => {
                                             <li style={{ cursor: 'pointer', userSelect: 'none' }}>lorem</li>
                                         </ul>
                                     }
-                                </article>
+                                </article> */}
+
 
                             </section>
                         </div>
@@ -47,9 +92,10 @@ const Catalog2 = () => {
                 </div>
 
                 <div className="katalog_right">
-                 
+
                     <div className="top_cards_katalog">
-                        <KatalogObshi />
+                        {/* <KatalogObshi /> */}
+                        <AllCatalog2 />
                     </div>
                 </div>
             </div>

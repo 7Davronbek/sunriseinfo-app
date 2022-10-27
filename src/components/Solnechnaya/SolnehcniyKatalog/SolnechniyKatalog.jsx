@@ -38,12 +38,12 @@ export default function SolnechniyKatalog() {
                 <div className="card_katalog" id='card-katalog'>
                     {loader && <Loader />}
                     {categories && categories.map((item, index) => (
-                        <Link to='/' data-aos="fade-up" className="card_image">
+                        <Link key={index} to={`/katalog-2`} data-aos="fade-up" className="card_image">
                             <h3>{item.name}</h3>
                             <img src={item.image} alt="sunriseinfo" />
                         </Link>
                     ))}
-                
+
                     <Link style={{ textDecoration: "none", color: "#121212" }} to='/contact' data-aos="fade-up" className="card_image">
                         <div style={{ textDecoration: "none", color: "#121212" }} ><h3 style={{ textDecoration: "none !important", color: "#121212" }} className='' >Связаться с нами</h3></div>
                     </Link>
