@@ -1,5 +1,7 @@
+import axios from "axios";
 import { useState } from "react";
 import { FaStar } from 'react-icons/fa'
+import { API_PATH } from "../../../../tools/constants";
 import './TabsKatalog.css'
 
 function TabsKatalog({ product }) {
@@ -9,6 +11,11 @@ function TabsKatalog({ product }) {
     const toggleTab = (index) => {
         setToggleState(index);
     };
+
+    const postStars = async (e) => {
+        await axios.post(API_PATH + '/main/rate/', { rating: e, product: product.id })
+        console.log(e);
+    }
 
     return (
         <div className="tab_cotae">
@@ -76,6 +83,7 @@ function TabsKatalog({ product }) {
                                     name="rating"
                                     value={ratingValue}
                                     onClick={() => setRating(ratingValue)}
+                                    onChange={(e) => postStars(ratingValue)}
                                 />
                                 <FaStar
                                     className="star"
