@@ -5,17 +5,21 @@ import serdechka from '../../../image/Union.svg'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { API_PATH } from '../../../tools/constants'
+import Loader from '../../Loader/Loader'
 
 export default function KatalogObshi() {
     const [product, setProduct] = useState([])
+    const [loader, setLoader] = useState(true)
 
     const getProducts = async () => {
         await axios.get(API_PATH + '/main/products')
             .then((res) => {
                 setProduct(res.data.data)
+                setLoader(false)
             })
             .catch((err) => {
                 console.log(err);
+                setLoader(false)
             })
     }
 
@@ -29,6 +33,12 @@ export default function KatalogObshi() {
 
 
                 <div className="top_frs_1">
+                    {loader &&
+                        <div className="frs_1 ">
+                            <Loader />
+                        </div>
+                    }
+
 
                     {product && product.map((item, index) => (
 

@@ -11,6 +11,7 @@ import Card_4 from '../../../../image/image 5.png'
 import '../orgotexnikaKatalog.css';
 import serdechka from '../../../../image/Union.svg';
 import { Link } from 'react-router-dom';
+import { API_PATH } from '../../../../tools/constants';
 
 export default function Swiper2({ allProducts }) {
   return (
@@ -32,7 +33,9 @@ export default function Swiper2({ allProducts }) {
           <SwiperSlide key={index}>
             <div className="img_carousel_1">
               <div className="image_carousel">
-                <img src={Card_1} alt="sunriseinfo" />
+                {item.product_images && item.product_images.map((item2, index2) => (
+                  <img key={index2} src={API_PATH + item2.image} alt="sunriseinfo" />
+                ))}
               </div>
               <div className="xalegi">
                 <p>{item.name}</p>

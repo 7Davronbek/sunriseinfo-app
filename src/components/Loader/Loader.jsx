@@ -5,7 +5,7 @@ import './Loader.css'
 const Loader = () => {
   return (
     <div className='Loader'>
-        <GridLoader color='#ff7e00' />
+        <GridLoader color='#333' />
     </div>
   )
 }

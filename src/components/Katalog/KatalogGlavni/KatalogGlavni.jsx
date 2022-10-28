@@ -6,17 +6,21 @@ import data from '../data';
 import KatalogObshi from '../KatalogObshi/KatalogObshi';
 import axios from 'axios';
 import { API_PATH } from '../../../tools/constants'
+import Loader from '../../Loader/Loader';
 
 export default function KatalogGlavni() {
     const [category, setCategory] = useState([])
+    const [loader, setLoader] = useState(true)
 
     const getCategories = async () => {
         await axios.get(API_PATH + '/main/category')
             .then((res) => {
                 setCategory(res.data)
+                setLoader(false)
             })
             .catch((err) => {
                 console.log(err);
+                setLoader(false)
             })
     }
 
@@ -40,6 +44,7 @@ export default function KatalogGlavni() {
                     <main className='main_accrdion'>
                         <div className='container'>
                             <section className='info'>
+                                {loader && <Loader />}
                                 {category && category.map((question) => (
                                     <Question key={question.id} {...question} />
                                 ))}
