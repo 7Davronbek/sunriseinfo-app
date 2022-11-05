@@ -268,7 +268,7 @@
     .nav__listitem .resporns_org{
       display: block;
       padding-top: 0!important;
-      margin-top: 1rem;
+      margin-top: -1rem;
     }
 
     .undr_none{
@@ -298,8 +298,6 @@
       line-height: 70px;
       margin-left: -1.5rem;
     }
-
- 
 
     .resp_none_katalog{
       display: none;
@@ -332,7 +330,7 @@
 
   .navbar_2 ul li .underline span{
     font-size: 28px;
-    line-height: 25px;
+    line-height: 0px;
   }
 
   .svg_for_none{
@@ -362,11 +360,16 @@
   background-color: #ffffff;
 }
 
+
 .rem2 a:hover{
   color: #f2f2f2;
 }
 .rem2 .number_nav {
   border-bottom: 1px solid #ffffff;
+}
+
+.bizning_ish{
+  margin-top: -7vh;
 }
 
 .rem2 a{

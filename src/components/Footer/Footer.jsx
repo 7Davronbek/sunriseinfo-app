@@ -12,7 +12,7 @@ export default function Footer() {
                         <div className="footer_1">
                             <h1>Контакты</h1>
                             <ul>
-                                <li><span style={{ color: "#ffffff" }}>Тел.</span> <a href="tel: +998(90) 123-45-67">+99890123-45-67</a></li>
+                                <li><span style={{ color: "#ffffff" }}>Тел.</span> <a href="tel: +998(99) 814-01-15">+998(99) 814-01-15</a></li>
                                 <li><span style={{ color: "#ffffff" }}>Почта.</span> <a href="mailto: info@sunriseinfo.uz">info@sunriseinfo.uz</a></li>
                                 <li><span style={{ color: "#ffffff" }}>Адрес.</span><a href="https://yandex.uz/maps/10335/tashkent/house/YkAYdA9kQEcOQFprfX91dnhqZg==/?ll=69.284929%2C41.347493&z=16">Адресс. г.Ташкент, Юнусабадский район, ССГ “Ифтихор”, ул.Ифтихор №1</a></li>
                                 <li className='politika'>Политика конфедициальности</li>
@@ -77,7 +77,7 @@ export default function Footer() {
                         <div className="footer_1 sec_for">
                             <h1>Контакты</h1>
                             <ul>
-                                <li><span style={{ color: "#ffffff" }}>Тел.</span> <a href="tel: +998(90) 123-45-67">+99890123-45-67</a></li>
+                                <li><span style={{ color: "#ffffff" }}>Тел.</span> <a href="tel: +998(99) 814-01-15">+998 (99) 814-01-15</a></li>
                                 <li><span style={{ color: "#ffffff" }}>Почта.</span> <a href="mailto: info@sunriseinfo.uz">info@sunriseinfo.uz</a></li>
                                 <li><span style={{ color: "#ffffff" }}>Адрес.</span><a href="https://yandex.uz/maps/10335/tashkent/house/YkAYdA9kQEcOQFprfX91dnhqZg==/?ll=69.284929%2C41.347493&z=16">Адресс. г.Ташкент, Юнусабадский район, ССГ “Ифтихор”, ул.Ифтихор №1</a></li>
                                 <li className='politika'>Политика конфедициальности</li>

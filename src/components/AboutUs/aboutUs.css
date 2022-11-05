@@ -95,7 +95,7 @@
 
 @media(max-width: 1093px){
     .about_us{
-        padding-top: 160px;
+        padding-top: 175px;
     }
     .top_1_about{
         display: flex;
@@ -118,21 +118,27 @@
     }
 }
 
+@media(max-width: 992px){
+    .about_us{
+        padding-top: 135px;
+    }
+}
+
 @media(max-width: 600px){
     .about_us{
-        padding: 139px 30px 80px 30px;
+        padding: 119px 30px 80px 30px;
     }
 }
 
 @media(max-width: 500px){
     .about_us{
-        padding: 129px 25px 80px 25px;
+        padding: 109px 25px 80px 25px;
     }
 }
 
 @media(max-width: 421px){
     .about_us{
-        padding: 129px 15px 80px 15px;
+        padding: 89px 15px 80px 15px;
     }
 
     .top_1_about h2{
@@ -162,7 +168,7 @@
 
 @media(max-width: 360px){
     .about_us{
-        padding: 129px 15px 50px 15px;
+        padding: 89px 15px 50px 15px;
     }
 
     .top_1_about h2{

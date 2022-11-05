@@ -87,6 +87,24 @@
     color: #8a8a8a;
 }
 
+@media(max-width:1422px){
+    .top_contact_1{
+        gap: 0px;
+     
+    }
+}
+
+@media(max-width:1218px){
+    .top_contact_1{
+        gap: 20px;
+    }
+}
+
+@media(max-width:1184px){
+    .text1_contact p{
+        width: 230px;
+    }
+}
 
 @media(max-width: 1074px){
     .contact{
@@ -114,15 +132,26 @@
     }
 }
 
+@media(max-width: 992px){
+    .contact{
+        padding: 159px 80px 80px 52px;
+    }
+}
+@media(max-width: 852px){
+    .contact{
+        padding: 129px 80px 80px 52px;
+    }
+}
+
 @media(max-width: 660px){
     .contact{
-        padding: 189px 30px 80px 30px;
+        padding: 119px 30px 80px 30px;
         gap: 10px;
     }    
 }
 @media(max-width: 423px){
     .contact{
-        padding: 189px 15px 80px 15px;
+        padding: 109px 15px 80px 15px;
         gap: 10px;
     }    
     .social_medi span .icon_fa{

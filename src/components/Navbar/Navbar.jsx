@@ -35,12 +35,12 @@ export default function Navbar() {
         <div className={`navbar_2 ${isOpen && "open"}`}>
           <Link data-aos="fade-up" to='/'><img className='img-lols' src={location.pathname === '/' ? Logo : Logo_1} alt="" /></Link>
           <ul className='nav__list' data-aos="fade-up">
-            <li><a href="" class="underline">
+            <li><a href="" className="underline">
               <span className={`${location.pathname === '/' ? 'active2' : ''}`} >Главная</span><svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
             </a></li>
             <Link onClick={() => setIsOpen(!isOpen)} style={{ textDecoration: "none" }} to='/aboutUs'>
               <li>
-                <a href="" class="underline">
+                <a href="" className="underline">
                   <span>О нас</span><svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
                 </a>
               </li>
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <Link onClick={() => setIsOpen(!isOpen)} style={{ textDecoration: "none", color: "#ffffff", width: "100%" }} to='/katalog'><li>Орготехника</li></Link>
                 <Link onClick={() => setIsOpen(!isOpen)} style={{ textDecoration: "none", color: "#ffffff", width: "100%" }} to='/solnechnaya'><li id='solnechniy-elektro'>Солнечные электростанции</li></Link>
               </div>
-              <a href="" class="underline" id='undr_none'>
+              <a href="" className="underline" id='undr_none'>
                 <span className='resp_none_katalog'>Каталог</span><svg id='svg_for_none' viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
               </a>
               <ul className='nav__listitemdrop '>
@@ -60,11 +60,11 @@ export default function Navbar() {
 
             </li></Link>
             <Link onClick={() => setIsOpen(!isOpen)} style={{ textDecoration: "none" }} to='/ourwork'><li>
-              <a href="" class="underline">
+              <a href="" className="underline bizning_ish">
                 <span>Наши работы</span><svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
               </a>
             </li></Link>
-            <Link onClick={() => setIsOpen(!isOpen)} style={{ textDecoration: "none" }} to='/contact'><li><a href="" class="underline">
+            <Link onClick={() => setIsOpen(!isOpen)} style={{ textDecoration: "none" }} to='/contact'><li><a href="" className="underline">
               <span>Контакты</span><svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
             </a></li></Link>
 

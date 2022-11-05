@@ -16,6 +16,7 @@ export default function SolnechnayaHome() {
         <p data-aos="fade-right">Мы сотрудничаем с ведущими компаниями и производителями солнечных и фотоэлектрических станций и являемся их крупнейшим представителем и дистрибьютором в Узбекистане.</p>
         <a href="#">Связаться с нами</a>
       </div>
+
       <div className="doveriya">
         <div className="doveriyaRow">
           <div className="doveriyaCol">
@@ -44,7 +45,6 @@ export default function SolnechnayaHome() {
               <p>Удобный доступ и мониторинг данных в режиме реального времени с помощью нашего мобильного приложения.</p>
             </div>
           </div>
-
         </div>
       </div>
 

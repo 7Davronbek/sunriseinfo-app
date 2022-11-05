@@ -10,7 +10,7 @@
 
 .about_container {
     margin: auto;
-    padding: 0 20px;
+    padding: 0 75px;
     max-width: 1440px;
     width: 100%;
 }
@@ -52,8 +52,6 @@
     font-weight: 500;
     color: #ffffff;
     line-height: 29px;
-
-
 }
 
 .text_home p {
