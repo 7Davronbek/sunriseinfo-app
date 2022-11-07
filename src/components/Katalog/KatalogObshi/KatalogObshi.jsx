@@ -44,6 +44,7 @@ export default function KatalogObshi() {
 
                         <div key={index} className="frs_1">
                             <div className="imag_frs_1">
+                                {product.product_images && product.product_images}
                                 <img src={Card_img} alt="" />
                             </div>
                             <div className="text_frs">

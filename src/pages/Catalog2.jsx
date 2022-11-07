@@ -56,7 +56,20 @@ const Catalog2 = () => {
                             <section className='info'>
 
                                 <Accordion className='service__list border2' open={open} toggle={toggle}>
-                                    <AccordionItem className='wrap'>
+                                    {categories && categories.map((item, index) => (
+                                        <AccordionItem key={index} className='wrap'>
+                                            <AccordionHeader targetId={item.id.toString()}>
+                                                {item.name}
+                                            </AccordionHeader>
+                                            {/* <AccordionBody accordionId="1">
+
+                                                <ul>
+                                                    <li></li>
+                                                </ul>
+                                            </AccordionBody> */}
+                                        </AccordionItem>
+                                    ))}
+                                    {/* <AccordionItem className='wrap'>
                                         <AccordionHeader targetId="1">
                                             Lorem
                                         </AccordionHeader>
@@ -66,7 +79,7 @@ const Catalog2 = () => {
                                                 <li>Lorem3</li>
                                             </ul>
                                         </AccordionBody>
-                                    </AccordionItem>
+                                    </AccordionItem> */}
                                 </Accordion>
 
 
