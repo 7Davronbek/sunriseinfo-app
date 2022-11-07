@@ -22,11 +22,11 @@ export default function Footer() {
                             <h1>Навигации</h1>
                             <ul>
 
-                                <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/"><li>Главная</li></Link>
-                                <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/katalog"><li>Каталог</li></Link>
-                                <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/aboutUs"><li>О нас</li></Link>
-                                <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/ourwork"><li>Наши работы</li></Link>
-                                <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/contact"><li>Контакты</li></Link>
+                                <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/"><li>Главная</li></Link>
+                                <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/katalog"><li>Каталог</li></Link>
+                                <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/aboutUs"><li>О нас</li></Link>
+                                <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/ourwork"><li>Наши работы</li></Link>
+                                <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/contact"><li>Контакты</li></Link>
 
                             </ul>
                         </div>
@@ -54,13 +54,13 @@ export default function Footer() {
                                 <h1>Навигации</h1>
                                 <ul className='ul_foor'>
                                     <div>
-                                        <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/"><li>Главная</li></Link>
-                                        <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/katalog"><li>Каталог</li></Link>
-                                        <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/aboutUs"><li>О нас</li></Link>
+                                        <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/"><li>Главная</li></Link>
+                                        <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/katalog"><li>Каталог</li></Link>
+                                        <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/aboutUs"><li>О нас</li></Link>
                                     </div>
                                     <div>
-                                        <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/ourwork"><li>Наши работы</li></Link>
-                                        <Link style={{ textDecoration: "none", color: "#8a8a8a" }} to="/contact"><li>Контакты</li></Link>
+                                        <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/ourwork"><li>Наши работы</li></Link>
+                                        <Link style={{ textDecoration: "none", color: "#ffffffb8" }} to="/contact"><li>Контакты</li></Link>
 
                                     </div>
                                 </ul>

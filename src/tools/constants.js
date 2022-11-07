@@ -1,1 +1,1 @@
-export const API_PATH = 'https://sunriseinfo.herokuapp.com/ru'
+export const API_PATH = 'https://backend.sunriseinfo.uz/ru'
