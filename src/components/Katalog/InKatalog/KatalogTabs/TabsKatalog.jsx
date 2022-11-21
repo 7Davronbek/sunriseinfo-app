@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FaStar } from 'react-icons/fa'
 import { API_PATH } from "../../../../tools/constants";
 import './TabsKatalog.css'
+import {getText} from '../../../locales/index'
 
 function TabsKatalog({ product }) {
     const [toggleState, setToggleState] = useState(1);
@@ -35,20 +36,20 @@ function TabsKatalog({ product }) {
                         className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(1)}
                     >
-                        Общая инфо.
+                      {getText("katalog7")}
                     </button>
                     <button
                         className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(2)}
                     >
-                        <p className="sorachem">Характеристики</p>
-                        <p className="sorashenya">Харак-ки</p>
+                        <p className="sorachem">{getText("katalog8")}</p>
+                        <p className="sorashenya">{getText("katalog9")}</p>
                     </button>
                     <button
                         className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(3)}
                     >
-                        Отзывы.
+                          {getText("katalog10")} 
                     </button>
                 </div>
 

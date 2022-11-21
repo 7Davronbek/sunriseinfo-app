@@ -12,6 +12,7 @@ import '../orgotexnikaKatalog.css';
 import serdechka from '../../../../image/Union.svg';
 import { Link } from 'react-router-dom';
 import { API_PATH } from '../../../../tools/constants';
+import {getText} from '../../../locales/index'
 
 export default function Swiper2({ allProducts }) {
   return (
@@ -40,7 +41,7 @@ export default function Swiper2({ allProducts }) {
               <div className="xalegi">
                 <p>{item.name}</p>
                 <div className="btn_sotsh">
-                  <Link to={`/see-catalog/${item.id}`} data-aos="fade-right" className="sena_send btn_sol">{item.price} сум</Link>
+                  <Link to={`/see-catalog/${item.id}`} data-aos="fade-right" className="sena_send btn_sol">{item.price} {getText("katalog3")}</Link>
 
                   <button data-aos="fade-left" className="bnt-serdechka"><img src={serdechka} alt="sunriseinfo" /></button>
                 </div>

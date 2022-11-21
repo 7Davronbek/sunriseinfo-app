@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ourWork.css'
 import Image_1 from '../../image/Rectangle 20 (1).png'
 import Image_2 from '../../image/Rectangle 21.png'
@@ -16,12 +16,35 @@ import Image_13 from '../../image/Rectangle 24.png'
 import Image_14 from '../../image/Rectangle 22.png'
 import Image_15 from '../../image/Rectangle 25.png'
 import Image_16 from '../../image/Rectangle 21.png'
+import {getText} from '../locales/index'
+import axios from 'axios'
+import { API_PATH } from '../../tools/constants'
 
 export default function OurWork() {
+
+    const [org, setOrg] = useState([])
+    const [loader, setLoader] = useState(true)
+  
+    const getOrg = async () => {
+      await axios.get(API_PATH + '/main/our-works/')
+        .then((res) => {
+          console.log(res);
+          setOrg(res.data)
+          setLoader(false)
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoader(false)
+        })
+    }
+  
+    useEffect(() => {
+      getOrg()
+    }, [])
     return (
         <>
             <div className="our_work_page">
-                <h2>Наши работы</h2>
+                <h2>{getText("ourwork1")}</h2>
                 <div className="image_our_work">
 
                     <div className="top_flex_image">
@@ -62,6 +85,18 @@ export default function OurWork() {
                     <div className="top_flex_image_2 top_4">
                         <img data-aos="fade-up" src={Image_8} alt="" />
                         <img data-aos="fade-up" src={Image_7} alt="" />
+                    </div>
+                    {org && org.map((item,index) =>(
+                    <div key={index}  className="top_flex_image_2 top_4">
+                        <img className='api_margin' data-aos="fade-up" src={item.image} alt="" />                        
+                        <img className='api_margin' data-aos="fade-up" src={item.image} alt="" />                        
+                    </div>
+                    ))}
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 mx-auto">                                                     
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

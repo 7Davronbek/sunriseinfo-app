@@ -16,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import Loader from '../../Loader/Loader';
+import {getText} from '../../locales/index'
 
 
 export default function InKatalog() {
@@ -26,6 +27,7 @@ export default function InKatalog() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [allProducts, setAllProducts] = useState([])
     const [loader, setLoader] = useState(true)
+    
 
     const getAllProducts = async () => {
         await axios.get(API_PATH + '/main/products/')
@@ -59,7 +61,7 @@ export default function InKatalog() {
             <div className="in_kat">
                 {loader ? <div style={{ height: '50vh' }} > <Loader /></div> : <>
                     <div className="top_in_kat">
-                        <button className='send_katalog botm_kupi'>Купить</button>
+                        <button className='send_katalog botm_kupi'>{getText("katalog4")}</button>
                         <Swiper
                             style={{
                                 "--swiper-navigation-color": "#fff",
@@ -89,11 +91,17 @@ export default function InKatalog() {
                             modules={[FreeMode, Navigation, Thumbs]}
                             className="mySwiper"
                         >
-                            {product.product_images && product.product_images.map((item, index) => (
-                                <SwiperSlide key={index}>
-                                    <img alt='sunriseinfo produkt' src={item.image} />
+                            
+                            <div className="for_inthekataloig">                      
+                              {product.product_images && product.product_images.map((item, index) => (        
+                                   
+                                  <SwiperSlide key={index}>                                
+                                  <img key={index} alt='sunriseinfo produkt' src={item.image} />                                  
                                 </SwiperSlide>
+                                
                             ))}
+                       </div>
+                            
                         </Swiper>
 
                         {/* <div className="left_top1">
@@ -106,12 +114,12 @@ export default function InKatalog() {
                         <div className="inkatalog_big_img"><img src={Inkatalog} alt="" /></div>
                     </div> */}
                         <div className="right_top1">
-                            <h2>{product.name && product.name}</h2>
-                            <p>{product.get_rate && product.get_rate.toString().slice(0, 3)} отзыв <a href="#"></a></p>
-                            <h5 className='sena_katalog'>{product.price && product.price} сум</h5>
-                            <h4>Описание </h4>
+                            <h2>{product.name.slice(0,20) && product.name.slice(0,20)}</h2>
+                            <p>{product.get_rate && product.get_rate.toString().slice(0, 3)} {getText("katalog5")} <a href="#"></a></p>
+                            <h5 className='sena_katalog'>{product.price && product.price} {getText("katalog3")}</h5>
+                            <h4> {getText("katalog6")}</h4>
                             <p>{product.description && product.description.slice(0, 20)}</p>
-                            <a href='tel: +998949988898' className='send_katalog'>Купить</a>
+                            <a href='tel: +998949988898' className='send_katalog'>{getText("katalog4")}</a>
                         </div>
                     </div>
                     <TabsKatalog product={product} />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './solnechnayaHome.css';
 import UslImg1 from '../../../image/Rectangle 80.png'
 import UslIm2 from '../../../image/Rectangle 81.png'
@@ -7,18 +7,61 @@ import Green1 from '../../../image/Group (2).svg'
 import Green2 from '../../../image/Group (3).svg'
 import Green3 from '../../../image/Group (4).svg'
 import Green4 from '../../../image/Group (5).svg'
+import { API_PATH } from '../../../tools/constants';
+import axios from 'axios';
+import {getText} from '../../locales/index'
 
 export default function SolnechnayaHome() {
+  const [banner2, setBanner2] = useState([])
+  const [loader, setLoader] = useState(true)
+  const [services, setServices] = useState([])
+
+  const getBanner2 = async () => {
+
+    await axios.get(API_PATH + '/products/banner-2')
+      .then((res) => {
+        setBanner2(res.data)
+        setLoader(false)
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoader(false)
+      })
+  }
+
+
+
+  const getServices = async () => {
+    await axios.get(API_PATH + '/products/services/')
+      .then((res) => {   
+        setServices(res.data)
+        setLoader(false)
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoader(false)
+      })
+  }
+ 
+
+  useEffect(() => {
+    getBanner2()
+    getServices()
+  }, [])
+
   return (
     <>
-      <div className="solnechniy_home">
-        <h2 data-aos="fade-right">Крупнейший производитель солнечной энергии</h2>
-        <p data-aos="fade-right">Мы сотрудничаем с ведущими компаниями и производителями солнечных и фотоэлектрических станций и являемся их крупнейшим представителем и дистрибьютором в Узбекистане.</p>
-        <a href="#">Связаться с нами</a>
+      {banner2 && banner2.slice(0,1).map((item,index) =>(
+        <div key={index} className="solnechniy_home">
+        <h2 data-aos="fade-right">{item.title}</h2>
+        <p data-aos="fade-right">{item.content}</p>
+        <a href="tel: +998(97) 264-77-78 ">{getText("about1")}</a>
       </div>
+      ))}
 
       <div className="doveriya">
-        <div className="doveriyaRow">
+       
+          <div className="doveriyaRow">
           <div className="doveriyaCol">
             <div className="doveriya_1" data-aos="fade-right">
               <h4>Доверие и гарантия</h4>
@@ -49,65 +92,48 @@ export default function SolnechnayaHome() {
       </div>
 
 
-
-
+    
 
 
       <div className="soln_uslug">
-        <h2>Услуги</h2>
-        <div className="flex_soln_usl">
-          <div className="soln_1_uslu" data-aos="fade-up">
+        <h2>{getText("soln1")}</h2>
+       
+          <div  className="flex_soln_usl">
+          {services && services.slice(0,3).map((item,index) =>(
+          <div key={index} className="soln_1_uslu" data-aos="fade-up">
             <div className="soln_imf_1">
-              <img src={UslImg1} alt="" />
+              <img src={item.image} alt="" />
             </div>
             <div className="sol_text">
-              <h4>Гарантия</h4>
-              <p>Обеспечиваем техническое обслуживание в течении первого года после установки</p>
-              <a href="#">Связаться с нами</a>
+              <h4>{item.title}</h4>
+              <p>{item.content}</p>
+              <a href="tel: +998(97) 264-77-78 ">{getText("about1")}</a>
             </div>
           </div>
-          <div className="soln_1_uslu" data-aos="fade-up">
-            <div className="soln_imf_1">
-              <img src={UslIm2} alt="" />
-            </div>
-            <div className="sol_text">
-              <h4>Гарантия</h4>
-              <p>Обеспечиваем техническое обслуживание в течении первого года после установки</p>
-              <a href="#">Связаться с нами</a>
-            </div>
-          </div>
-          <div className="soln_1_uslu" data-aos="fade-up">
-            <div className="soln_imf_1">
-              <img src={UslImg3} alt="" />
-            </div>
-            <div className="sol_text">
-              <h4>Гарантия</h4>
-              <p>Обеспечиваем техническое обслуживание в течении первого года после установки</p>
-              <a href="#">Связаться с нами</a>
-            </div>
-          </div>
+        ))}
         </div>
+       
+
 
         <hr />
 
         <div className="green_icon">
           <div className="green_1">
             <img src={Green4} alt="" />
-            <p>Энергоэффективные решения</p>
+            <p>{getText("soln2")}</p>
           </div>
           <div className="green_1">
             <img src={Green3} alt="" />
-            <p>Эксплуатация солнечной панели</p>
+            <p>{getText("soln3")}</p>
           </div>
           <div className="green_1">
             <img src={Green1} alt="" />
-            <p>Резервный аккумуляторный генератор</p>
+            <p>{getText("soln4")}</p>
           </div>
           <div className="green_1">
             <img src={Green2} alt="" />
-            <p>Защита от перенапряжения всего дома</p>
+            <p>{getText("soln5")}</p>
           </div>
-
         </div>
       </div>
     </>

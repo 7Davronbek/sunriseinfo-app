@@ -9,6 +9,10 @@
     padding-top: 50px;
 }
 
+.container{
+    width: 100%;
+}
+
 .image_our_work img{
     width: 410px;
     
@@ -20,6 +24,11 @@
     gap: 1rem;
     margin-bottom: 1rem;
 }
+
+.api_margin{
+    margin-top: 10px;
+}
+
 .top_1_image img{
     width: 100%;
 }
@@ -41,6 +50,15 @@
 
 .top_flex_image_2 img:nth-child(2){
     width: 66%;  
+}
+
+.imag_for_api{
+    border-radius: 5px;
+}
+
+.for_api_grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .top_3{

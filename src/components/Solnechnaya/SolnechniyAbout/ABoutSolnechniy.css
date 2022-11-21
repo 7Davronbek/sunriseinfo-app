@@ -1,0 +1,167 @@
+.about_soln{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 80px;
+}
+
+.about_soln h3{
+    font-size: 44px;
+    font-weight: 500;
+    color: #121212;
+
+}
+
+.about_soln_tex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.right_abowjkfn p{
+    font-size: 18px;
+    font-weight: 400;
+    
+    color: #121212;
+}
+
+.ulling{
+    display: flex;
+    list-style-type: square;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #ff7e00;
+}
+
+.ulling li{
+    color: #121212;
+}
+
+.sec_ulling{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sec_ulling li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left_abowjkfn{
+    width: 575px;
+}
+
+.left_abowjkfn img{
+    width: 100%;
+}
+
+.right_abowjkfn{
+    width: 700px;
+}
+
+.sec_ulling li span:nth-child(1){
+    font-size: 44px;
+    color: #ff7e00;
+    font-weight: 400;
+}
+
+.sec_ulling li span:nth-child(2){
+    color: #8A8A8A;
+    font-size: 18px;
+    text-align: left;
+}
+
+@media(max-width:1287px){
+    .sec_ulling li span:nth-child(1){
+        font-size: 36px;
+        color: #ff7e00;
+        font-weight: 400;
+    }
+    .sec_ulling li span:nth-child(2){
+        width: 40px;
+        color: #8A8A8A;
+        font-size: 14px;
+        text-align: left;
+    }
+    .sec_ulling li{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}
+
+@media(max-width:992px){
+
+    .about_soln_tex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_soln h3{
+        font-size: 26px;
+    }
+
+    .left_abowjkfn{
+        width: 100%;
+    }
+
+    .right_abowjkfn{
+        width: 100%;
+    }
+}
+
+@media(max-width:556px){
+    .sec_ulling{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .sec_ulling li span:nth-child(2){
+        width: 100%;
+        color: #8A8A8A;
+        font-size: 18px;
+        text-align: left;
+        
+    }
+    .sec_ulling li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+    .sec_ulling li span:nth-child(1){
+        font-size: 44px;
+        color: #ff7e00;
+        font-weight: 400;
+    }
+    .about_soln{
+        max-width: 1440px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 5px 40px;
+    }
+}
+
+@media(max-width:453px){
+    .about_soln{
+        max-width: 1440px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 5px 20px;
+    }
+}

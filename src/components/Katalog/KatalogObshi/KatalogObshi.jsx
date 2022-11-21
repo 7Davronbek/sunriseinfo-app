@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { API_PATH } from '../../../tools/constants'
 import Loader from '../../Loader/Loader'
+import {getText} from '../../locales/index'
 
 export default function KatalogObshi() {
     const [product, setProduct] = useState([])
@@ -43,15 +44,18 @@ export default function KatalogObshi() {
                     {product && product.map((item, index) => (
 
                         <div key={index} className="frs_1">
+                            <div className="sliceing">
                             <div className="imag_frs_1">
-                                {product.product_images && product.product_images}
                                 <img src={Card_img} alt="" />
                             </div>
+                            <h2 className='text_frs1'>{item.description.slice(0,80)}</h2>
+                            </div>
+                            
                             <div className="text_frs">
-                                <h2>{item.description}</h2>
+                              
                                 <div className="btn_katalog">
                                     <Link to={`/see-catalog/${item.id}`} style={{ textDecoration: "none" }}>
-                                        <button className="btn_sena">{item.price} сум</button>
+                                        <button className="btn_sena">{item.price} {getText("katalog3")}</button>
                                     </Link>
                                     <button className="bnt_serdechka"><img src={serdechka} alt="" /></button>
                                 </div>

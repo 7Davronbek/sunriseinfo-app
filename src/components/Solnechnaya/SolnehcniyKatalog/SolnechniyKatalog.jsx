@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { API_PATH } from '../../../tools/constants'
 import Loader from '../../Loader/Loader'
+import {getText} from '../../locales/index'
 
 export default function SolnechniyKatalog() {
     const [categories, setCategories] = useState([])
@@ -34,7 +35,7 @@ export default function SolnechniyKatalog() {
     return (
         <>
             <div className="solnechniy_katLOG">
-                <h2 data-aos="fade-up">Товары</h2>
+                <h2 data-aos="fade-up">{getText("soln13")}</h2>
                 <div className="card_katalog" id='card-katalog'>
                     {loader && <Loader />}
                     {categories && categories.map((item, index) => (
@@ -45,7 +46,7 @@ export default function SolnechniyKatalog() {
                     ))}
 
                     <Link style={{ textDecoration: "none", color: "#121212" }} to='/contact' data-aos="fade-up" className="card_image">
-                        <div style={{ textDecoration: "none", color: "#121212" }} ><h3 style={{ textDecoration: "none !important", color: "#121212" }} className='' >Связаться с нами</h3></div>
+                        <div style={{ textDecoration: "none", color: "#121212" }} ><h3 style={{ textDecoration: "none !important", color: "#121212" }} className='' >{getText("about1")}</h3></div>
                     </Link>
                 </div>
             </div>

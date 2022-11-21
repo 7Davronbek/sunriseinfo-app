@@ -7,6 +7,7 @@ import KatalogObshi from '../KatalogObshi/KatalogObshi';
 import axios from 'axios';
 import { API_PATH } from '../../../tools/constants'
 import Loader from '../../Loader/Loader';
+import {getText} from '../../locales/index'
 
 export default function KatalogGlavni() {
     const [category, setCategory] = useState([])
@@ -32,14 +33,14 @@ export default function KatalogGlavni() {
         <>
             <div className="katalaog_glavni">
                 <div className="katalog_left">
-                    <h2>Каталог</h2>
+                    <h2>{getText("katalog1")}</h2>
                     <div class="container">
                         <div class="webflow-style-input">
                             <input className='input_katalog' type="text" placeholder="Поиск"></input>
                             <button className='btn_katalog' type="submit"><IoIosArrowRoundForward /></button>
                         </div>
                     </div>
-                    <h4 className='filtr_h4'>Фильтр</h4>
+                    <h4 className='filtr_h4'>{getText("katalog2")}</h4>
 
                     <main className='main_accrdion'>
                         <div className='container'>

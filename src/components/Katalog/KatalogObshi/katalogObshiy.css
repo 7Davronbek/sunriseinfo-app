@@ -13,6 +13,7 @@
     width: 20.5vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     border-radius: 5px;
     border: 1px solid #e5e5e5;
@@ -38,12 +39,12 @@
     padding: 60px 0px 60px 0;
 }
 
-.text_frs {
+.text_frs1 {
     width: 100%;
     padding: 22px 0px 20px 15px;
 }
 
-.text_frs h2 {
+.text_frs1  {
     font-size: 24px;
     font-weight: 500;
 }
@@ -59,6 +60,8 @@
     border-radius: 5px;
     background-color: #ff7e00;
     border: none;
+    margin-left: 15px;
+    margin-bottom: 20px;
     padding: 12px 30.5px;
     color: #ffffff;
     font-size: 14px;

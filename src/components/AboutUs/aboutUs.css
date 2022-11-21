@@ -80,6 +80,8 @@
 
 .left_about_3 p{
     font-size: 18px;
+    color: #8a8a8a;
+    margin-top: 5px;
 }
 
 @media(max-width: 1245px){

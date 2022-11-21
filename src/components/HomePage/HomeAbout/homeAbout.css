@@ -130,3 +130,9 @@
     }
 
 }
+
+@media(max-height:600px){
+    .text_home h3{
+        padding-top: 100px;
+    }
+}

@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 80px 14px 80px;
+    padding: 8px 80px 0px 80px;
 }
 
 .number_nav{
@@ -14,7 +14,7 @@
   align-items: center;
   color: #ffffff;
   gap: 50px;
-  padding: 15px 100px 15px 0;
+  padding: 5px 100px 15px 0;
   border-bottom: 1px solid #ffffff;
 }
 
@@ -30,6 +30,11 @@
   color: #ffffff;
   font-size: 21px;
   text-decoration: none;
+}
+
+.navbar select{
+  background-color: transparent;
+  border: none;
   
 }
 
@@ -68,7 +73,7 @@
 }
 
 .active{
-  background-color: #121212cf;
+  background: linear-gradient(136.14deg, #fbb80ea8 -28.56%, #ee741de4 95.4%);
 }
 
 
@@ -79,7 +84,7 @@
 }
 
 .rem2 a:hover{
-  color: #8a8a8a;
+  color: #ffffff;
 
 }
 
@@ -439,5 +444,11 @@
 
   .nav-toggle.open > .bar::after {
     transform: rotate(-45deg) translate(26px, 26px);
+  }
+}
+
+@media(max-width:688px){
+  .bizning_ish{
+    margin-top: -45px;
   }
 }
