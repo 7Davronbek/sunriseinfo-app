@@ -6,6 +6,7 @@ import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
 import HomePage from './components/HomePage/HomePage';
 import InKatalog from './components/Katalog/InKatalog/InKatalog';
+import InCatalog2 from './components/Katalog/InKatalog/InCatalog2';
 import Katalog from './components/Katalog/Katalog';
 import Navbar from './components/Navbar/Navbar';
 import Orgotexnika from './components/Orgotextnika/Orgotexnika';
@@ -36,7 +37,7 @@ function App() {
 
         <Route path='/katalog' element={<Katalog />} />
         <Route path='/katalog-2' element={<Catalog2 />} />
-        <Route path='/see-catalog-2/:id' element={<InKatalog />} />
+        <Route path='/see-catalog-2/:id' element={<InCatalog2 />} />
 
         <Route path='/see-catalog/:id' element={<InKatalog />} />
       </Routes>

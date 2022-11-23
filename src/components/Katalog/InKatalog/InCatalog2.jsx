@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './inKatalog.css';
-// import Inkatalog from '../../../image/image 4.png'
-import TabsKatalog from './KatalogTabs/TabsKatalog';
-import Swiper2 from '../../Orgotextnika/OrgotexnikaKatalog/Swiper/Swiper';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { API_PATH } from '../../../tools/constants';
@@ -16,10 +13,11 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import Loader from '../../Loader/Loader';
-import {getText} from '../../locales/index'
+import { getText } from '../../locales/index'
+import TabsKatalog2 from './KatalogTabs/TabKatalog2';
 
 
-export default function InKatalog() {
+export default function InCatalog2() {
 
     const location = useLocation()
     const path = location.pathname.split('/')[2]
@@ -27,7 +25,7 @@ export default function InKatalog() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [allProducts, setAllProducts] = useState([])
     const [loader, setLoader] = useState(true)
-    
+
 
     const getAllProducts = async () => {
         await axios.get(API_PATH + '/main/products/')
@@ -40,7 +38,7 @@ export default function InKatalog() {
     }
 
     const getById = async () => {
-        await axios.get(API_PATH + `/main/product-detail/${path}`)
+        await axios.get(API_PATH + `/products/product-2-detail/${path}`)
             .then((res) => {
                 setProduct(res.data)
                 setLoader(false)
@@ -53,7 +51,7 @@ export default function InKatalog() {
 
     useEffect(() => {
         getById()
-        getAllProducts()
+        // getAllProducts()
     }, [path])
 
     return (
@@ -75,7 +73,7 @@ export default function InKatalog() {
                             className="mySwiper2"
                             thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
                         >
-                            {product.product_images && product.product_images.map((item, index) => (
+                            {product.product_2_images && product.product_2_images.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <img alt='sunriseinfo produkt' src={item.image} />
                                 </SwiperSlide>
@@ -91,17 +89,17 @@ export default function InKatalog() {
                             modules={[FreeMode, Navigation, Thumbs]}
                             className="mySwiper"
                         >
-                            
-                            <div className="for_inthekataloig">                      
-                              {product.product_images && product.product_images.map((item, index) => (        
-                                   
-                                  <SwiperSlide key={index}>                                
-                                  <img key={index} alt='sunriseinfo produkt' src={item.image} />                                  
-                                </SwiperSlide>
-                                
-                            ))}
-                       </div>
-                            
+
+                            <div className="for_inthekataloig">
+                                {product.product_2_images && product.product_2_images.map((item, index) => (
+
+                                    <SwiperSlide key={index}>
+                                        <img key={index} alt='sunriseinfo produkt' src={item.image} />
+                                    </SwiperSlide>
+
+                                ))}
+                            </div>
+
                         </Swiper>
 
                         {/* <div className="left_top1">
@@ -114,7 +112,7 @@ export default function InKatalog() {
                         <div className="inkatalog_big_img"><img src={Inkatalog} alt="" /></div>
                     </div> */}
                         <div className="right_top1">
-                            <h2>{product.name.slice(0,20) && product.name.slice(0,20)}</h2>
+                            <h2>{product.name.slice(0, 20) && product.name.slice(0, 20)}</h2>
                             <p>{product.get_rate && product.get_rate.toString().slice(0, 3)} {getText("katalog5")} <a href="#"></a></p>
                             <h5 className='sena_katalog'>{product.price && product.price} {getText("katalog3")}</h5>
                             <h4> {getText("katalog6")}</h4>
@@ -122,7 +120,7 @@ export default function InKatalog() {
                             <a href='tel: +998949988898' className='send_katalog'>{getText("katalog4")}</a>
                         </div>
                     </div>
-                    <TabsKatalog product={product} />
+                    <TabsKatalog2 product={product} />
                     {/* <Swiper2 allProducts={allProducts} /> */}
                 </>}
             </div>

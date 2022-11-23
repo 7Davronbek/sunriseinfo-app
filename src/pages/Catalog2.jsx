@@ -13,6 +13,7 @@ import {
 const Catalog2 = () => {
     const [expanded, setExpanded] = useState(false)
     const [categories, setCategories] = useState([])
+    const [catchProduct, setCatchProduct] = useState('')
 
     const getProductCategories = async () => {
         await axios.get(API_PATH + '/products/category-2/')
@@ -55,9 +56,9 @@ const Catalog2 = () => {
                         <div className='container'>
                             <section className='info'>
 
-                                <h6 className='mb-3 pb-3' style={{ cursor: 'pointer', borderBottom: '1px solid silver' }}>Все</h6>
+                                <h6 onClick={() => setCatchProduct('')} className='mb-3 pb-3' style={{ cursor: 'pointer', borderBottom: '1px solid silver' }}>Все</h6>
                                 {categories && categories.map((item, index) => (
-                                    <h6 className='mb-3 pb-3' key={index} style={{ cursor: 'pointer', borderBottom: '1px solid silver' }}>{item.name}</h6>
+                                    <h6 onClick={() => setCatchProduct(item.id)} className='mb-3 pb-3' key={index} style={{ cursor: 'pointer', borderBottom: '1px solid silver' }}>{item.name}</h6>
                                 ))}
 
                                 {/* <Accordion className='service__list border2' open={open} toggle={toggle}>
@@ -100,8 +101,9 @@ const Catalog2 = () => {
 
                     <div className="top_cards_katalog">
                         {/* <KatalogObshi /> */}
-                        <AllCatalog2 />
+                        <AllCatalog2 catchProduct={catchProduct} />
                     </div>
+
                 </div>
             </div>
 
