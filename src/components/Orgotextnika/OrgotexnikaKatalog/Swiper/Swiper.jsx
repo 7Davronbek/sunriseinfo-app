@@ -4,10 +4,6 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Card_1 from '../../../../image/image 3.png'
-import Card_2 from '../../../../image/image 4.png'
-import Card_3 from '../../../../image/image 5 (1).png'
-import Card_4 from '../../../../image/image 5.png'
 import '../orgotexnikaKatalog.css';
 import serdechka from '../../../../image/Union.svg';
 import { Link } from 'react-router-dom';

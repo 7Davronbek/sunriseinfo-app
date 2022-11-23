@@ -5,6 +5,39 @@
     padding: 50px 100px 100px 80px !important;
 }
 
+.card_image_for_solnechniye{
+    /* background-color: red; */
+    width: 100%;
+}
+
+.card_katalog_second{
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+
+.for_second_image_soln{
+    height: 400px;
+}
+
+.for_second_image_soln img{
+    height: 350px;
+    display: block;
+    width: 100%;
+}
+
+
+.immage_for_katalog{
+    width: 100%;
+    height: 100%;
+}
+
+.immage_for_katalog img{
+    width: 100%;
+}
+
 .card_katalog{
 }
 

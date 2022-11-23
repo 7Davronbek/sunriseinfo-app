@@ -46,7 +46,7 @@ export default function KatalogObshi() {
                         <div key={index} className="frs_1">
                             <div className="sliceing">
                             <div className="imag_frs_1">
-                                <img src={Card_img} alt="" />
+                                <img src={item.product_images} alt="" />
                             </div>
                             <h2 className='text_frs1'>{item.description.slice(0,80)}</h2>
                             </div>

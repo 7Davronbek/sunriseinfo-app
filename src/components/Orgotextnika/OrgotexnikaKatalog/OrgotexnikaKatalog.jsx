@@ -13,6 +13,7 @@ import img7 from '../../../image/image 6.png'
 import Swiper2 from './Swiper/Swiper'
 import {getText} from '../../locales/index'
 
+
 export default function OrgotexnikaKatalog() {
     return (
         <>
@@ -23,10 +24,6 @@ export default function OrgotexnikaKatalog() {
                         <h3>{getText("org6")}</h3>
                         <img src={img7} alt="" />
                     </div>
-                    {/* <div data-aos="fade-up" className="card_image">
-                        <h3>Ноутбуки</h3>
-                        <img src={img8} alt="" />
-                    </div> */}
                     <div data-aos="fade-up" className="card_image">
                         <h3>{getText("org7")}</h3>
                         <img src={img6} alt="" />
@@ -59,6 +56,7 @@ export default function OrgotexnikaKatalog() {
 
                 <div className="carousel_boot">
                     <Swiper2 />
+                    
                 </div>
             </div>
         </>

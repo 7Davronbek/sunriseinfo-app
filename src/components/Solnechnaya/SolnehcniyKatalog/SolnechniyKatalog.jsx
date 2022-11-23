@@ -36,12 +36,26 @@ export default function SolnechniyKatalog() {
         <>
             <div className="solnechniy_katLOG">
                 <h2 data-aos="fade-up">{getText("soln13")}</h2>
-                <div className="card_katalog" id='card-katalog'>
+                <div className="card_katalog_second" id='card-katalog'>
                     {loader && <Loader />}
                     {categories && categories.map((item, index) => (
-                        <Link key={index} to={`/katalog-2`} data-aos="fade-up" className="card_image">
-                            <h3>{item.name}</h3>
-                            <img src={item.image} alt="sunriseinfo" />
+                        <Link key={index} to={`/katalog-2`} style={{color: "#000000"}} data-aos="fade-up" className="card_image">
+                            <div className="card_image_for_solnechniye">
+                                <h3>{item.name}</h3>
+                                <div className="for_second_image_soln">
+                                    <img src={item.image} alt="" />
+                                </div>
+                            </div>
+                        
+                        
+                        
+                        
+                           {/* <div className="card_image">
+                           <h3>{item.name}</h3>
+                           <div className="immage_for_katalog">
+                           <img src={item.image} alt="sunriseinfo" />
+                           </div>
+                           </div> */}
                         </Link>
                     ))}
 
