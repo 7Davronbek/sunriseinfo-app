@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react'
 import './katalogGlavni.css';
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import Question from './SingleQuestion';
-import data from '../data';
+// import data from '../data';
 import KatalogObshi from '../KatalogObshi/KatalogObshi';
 import axios from 'axios';
 import { API_PATH } from '../../../tools/constants'
 import Loader from '../../Loader/Loader';
-import {getText} from '../../locales/index'
+import { getText } from '../../locales/index'
 
 export default function KatalogGlavni() {
     const [category, setCategory] = useState([])
     const [loader, setLoader] = useState(true)
+    const [catchProduct, setCatchProduct] = useState('')
 
     const getCategories = async () => {
         await axios.get(API_PATH + '/main/category')
@@ -46,8 +47,11 @@ export default function KatalogGlavni() {
                         <div className='container'>
                             <section className='info'>
                                 {loader && <Loader />}
+                                <h5 onClick={() => { setCatchProduct('') }} className='question-title py-3 w-100'>
+                                    Все
+                                </h5>
                                 {category && category.map((question) => (
-                                    <Question key={question.id} {...question} />
+                                    <Question setCatchProduct={setCatchProduct} key={question.id} {...question} />
                                 ))}
                             </section>
                         </div>
@@ -70,7 +74,7 @@ export default function KatalogGlavni() {
                         </div>
                     </div> */}
                     <div className="top_cards_katalog">
-                        <KatalogObshi />
+                        <KatalogObshi catchProduct={catchProduct} />
                     </div>
                 </div>
             </div>

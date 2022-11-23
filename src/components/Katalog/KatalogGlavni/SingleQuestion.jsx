@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-const Question = ({ id, name}) => {
+const Question = ({ id, name, setCatchProduct }) => {
   const [expanded, setExpanded] = useState(false)
 
   return (
     <article className='question'>
       <header>
-        <h4 onClick={() => setExpanded(!expanded)} className='question-title py-3 w-100'>
+        <h4 onClick={() => { setExpanded(!expanded); setCatchProduct(id) }} className='question-title py-3 w-100'>
           {name}
         </h4>
         {/* <button className='btn' onClick={() => setExpanded(!expanded)}>
