@@ -48,7 +48,7 @@ export default function KatalogObshi({ catchProduct }) {
                         <div key={index} className="frs_1">
                             <div className="sliceing">
                                 <div className="imag_frs_1">
-                                    {product.product_images && product.product_images.map((item2, index2) => (
+                                    {item.product_images && item.product_images.map((item2, index2) => (
                                         <img key={index2} className='w-100' src={API_PATH + item2.image} alt="" />
                                     ))}
                                 </div>

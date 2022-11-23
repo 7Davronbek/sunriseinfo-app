@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+// import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import AllCatalog2 from '../components/Catalog2/AllCatalog2'
 import { API_PATH } from '../tools/constants'
 import {
@@ -55,7 +55,12 @@ const Catalog2 = () => {
                         <div className='container'>
                             <section className='info'>
 
-                                <Accordion className='service__list border2' open={open} toggle={toggle}>
+                                <h6 className='mb-3 pb-3' style={{ cursor: 'pointer', borderBottom: '1px solid silver' }}>Все</h6>
+                                {categories && categories.map((item, index) => (
+                                    <h6 className='mb-3 pb-3' key={index} style={{ cursor: 'pointer', borderBottom: '1px solid silver' }}>{item.name}</h6>
+                                ))}
+
+                                {/* <Accordion className='service__list border2' open={open} toggle={toggle}>
                                     <AccordionItem className='wrap'>
                                         <AccordionHeader targetId="1">
                                             Lorem
@@ -67,7 +72,7 @@ const Catalog2 = () => {
                                             </ul>
                                         </AccordionBody>
                                     </AccordionItem>
-                                </Accordion>
+                                </Accordion> */}
 
 
                                 {/* <article className='question'>

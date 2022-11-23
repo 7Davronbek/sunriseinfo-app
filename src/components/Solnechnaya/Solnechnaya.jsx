@@ -6,9 +6,9 @@ import SolnechniyKatalog from './SolnehcniyKatalog/SolnechniyKatalog'
 export default function Solnechnaya() {
   return (
     <>
-    <SolnechnayaHome />
-    <SolnechniyKatalog />
-    <SolnechniyAbout />
+      <SolnechnayaHome />
+      <SolnechniyKatalog />
+      <SolnechniyAbout />
     </>
   )
 }

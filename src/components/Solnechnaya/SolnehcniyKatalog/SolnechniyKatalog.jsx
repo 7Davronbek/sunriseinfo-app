@@ -1,26 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './solnechniyKatalog.css'
-import card_1 from '../../../image/image 13.png'
-import card_2 from '../../../image/image 14.png'
-import card_3 from '../../../image/image 15.png'
-import card_4 from '../../../image/image 17.png'
-import card_5 from '../../../image/image 19.png'
-import card_6 from '../../../image/image 20.png'
-import card_7 from '../../../image/image 23.png'
-import card_8 from '../../../image/image 25.png'
 // import ResponsiveSol from './Carousel/CarouselSlo'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { API_PATH } from '../../../tools/constants'
 import Loader from '../../Loader/Loader'
-import {getText} from '../../locales/index'
+import { getText } from '../../locales/index'
 
 export default function SolnechniyKatalog() {
     const [categories, setCategories] = useState([])
     const [loader, setLoader] = useState(true)
     const getCategories = async () => {
         await axios.get(API_PATH + '/products/category-2/')
-            .then((res) => {
+            .then((res) => { 
                 setLoader(false)
                 setCategories(res.data)
             })
@@ -39,18 +31,18 @@ export default function SolnechniyKatalog() {
                 <div className="card_katalog_second" id='card-katalog'>
                     {loader && <Loader />}
                     {categories && categories.map((item, index) => (
-                        <Link key={index} to={`/katalog-2`} style={{color: "#000000"}} data-aos="fade-up" className="card_image">
+                        <Link key={index} to={`/katalog-2`} style={{ color: "#000000" }} data-aos="fade-up" className="card_image">
                             <div className="card_image_for_solnechniye">
                                 <h3>{item.name}</h3>
                                 <div className="for_second_image_soln">
                                     <img src={item.image} alt="" />
                                 </div>
                             </div>
-                        
-                        
-                        
-                        
-                           {/* <div className="card_image">
+
+
+
+
+                            {/* <div className="card_image">
                            <h3>{item.name}</h3>
                            <div className="immage_for_katalog">
                            <img src={item.image} alt="sunriseinfo" />
